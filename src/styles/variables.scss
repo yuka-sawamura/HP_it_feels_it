@@ -1,0 +1,14 @@
+// media query
+$breakpointSp: 768px;
+
+@mixin pc {
+  @media (min-width: ($breakpointSp)) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width: ($breakpointSp)) {
+    @content;
+  }
+}

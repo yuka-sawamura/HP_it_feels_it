@@ -1,0 +1,50 @@
+@import "./variables.scss";
+
+.itit_header {
+  &_group {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+    background-color: white;
+    opacity: 0.9;
+    display: flex;
+    justify-content: space-between;
+  }
+  &_text {
+    display: flex;
+    gap: 80px;
+  }
+  &_title {
+    align-items: center;
+    margin-left: 32px;
+    font-size: 32px;
+  }
+  &_p-group {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    font-size: 20px;
+  }
+
+  &_p {
+    margin-right: 20px;
+    font-size: 20px;
+  }
+  &_pages-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 50px;
+    background-color: #ee9f84;
+  }
+  &_pages {
+    display: flex;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
