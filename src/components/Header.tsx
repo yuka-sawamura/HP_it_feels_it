@@ -17,7 +17,7 @@ const Header = () => {
           </div>
         </div>
         <div className="itit_header_pages-group">
-          <div className="itit_header_pages">脱毛ページ</div>
+          <div className="itit_header_pages">脱毛ページ ＞</div>
         </div>
       </div>
     </header>

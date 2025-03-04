@@ -24,7 +24,21 @@ export default function Home() {
       </Head>
       <div className={`${geistSans.variable} ${geistMono.variable}`}>
         <Header />
-        <main className=""></main>
+        <main>
+          <div className="itit_main">
+            <div className="itit_main_group">
+              <div className="itit_main_group_text">
+                <p>ご予約はお電話でお受けします</p>
+                <p>0178-96-2581</p>
+              </div>
+              <img
+                className="itit_main_image"
+                src="/it-feels-it-top-image.png"
+                alt="top-image画像"
+              />
+            </div>
+          </div>
+        </main>
       </div>
     </>
   );
