@@ -33,6 +33,7 @@
     text-align: center;
     margin: 60px;
   }
+
   &_price-table {
     display: flex;
     justify-content: center;
@@ -54,7 +55,5 @@
   &_menu-name {
     padding: 10px;
     text-align: left;
-  }
-  &_menu-price {
   }
 }
