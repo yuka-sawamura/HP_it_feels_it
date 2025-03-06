@@ -1,14 +1,60 @@
-.itit_main {
+.itit_top {
   &_group {
+    position: relative;
+  }
+  &_text {
+    position: absolute;
+    bottom: 5px; // 位置を調整（適宜変更）
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    opacity: 0.9;
+    padding: 20px 40px;
+    text-align: center;
+  }
+
+  &_text_p {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  &_text_phone {
+    font-size: 18px;
   }
   &_image {
     width: 1500px;
     height: 600px;
   }
-  &_group_text {
-    position: absolute;
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+}
+
+.itit_menu {
+  &_title {
+    font-size: 40px;
+    text-align: center;
+    margin: 60px;
+  }
+  &_price-table {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    padding: 20px;
+  }
+  &_price-category {
+    width: 450px;
+    height: 120px;
+    border: 1px solid #eacda8;
+  }
+  &_category-title {
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 1px solid #eacda8;
+  }
+  &_menu-name {
+    padding: 10px;
+    text-align: left;
+  }
+  &_menu-price {
   }
 }

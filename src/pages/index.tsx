@@ -25,19 +25,68 @@ export default function Home() {
       <div className={`${geistSans.variable} ${geistMono.variable}`}>
         <Header />
         <main>
-          <div className="itit_main">
-            <div className="itit_main_group">
-              <div className="itit_main_group_text">
-                <p>ご予約はお電話でお受けします</p>
-                <p>0178-96-2581</p>
+          <div className="itit_top">
+            <div className="itit_top_group">
+              <div className="itit_top_text">
+                <p className="itit_top_text_p">ご予約はお電話でお受けします</p>
+                <p className="itit_top_text_phone">0178-96-2581</p>
               </div>
               <img
-                className="itit_main_image"
+                className="itit_top_image"
                 src="/it-feels-it-top-image.png"
                 alt="top-image画像"
               />
             </div>
           </div>
+
+          <section>
+            <div className="itit_menu">
+              <div className="itit_menu_group">
+                <h1 className="itit_menu_title">メニューと料金</h1>
+              </div>
+            </div>
+            <div className="itit_menu_price-table">
+              <table className="itit_menu_price-category">
+                <tbody>
+                  <tr className="itit_menu_category-title">
+                    <td className="itit_menu_category-title_text">ヘア</td>
+                  </tr>
+                  <tr className="itit_menu_menu-gruop">
+                    <td className="itit_menu_menu-name">カット</td>
+                    <td className="itit_menu_menu-price">¥4,000</td>
+                  </tr>
+                  <tr className="itit_menu_menu-gruop">
+                    <td className="itit_menu_menu-name">カット・カラー</td>
+                    <td className="itit_menu_menu-price">¥8,000〜</td>
+                  </tr>
+                  <tr className="itit_menu_menu-gruop">
+                    <td className="itit_menu_menu-name">カット・パーマ</td>
+                    <td className="itit_menu_menu-price">¥8,000〜</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table className="itit_menu_price-category">
+                <tbody>
+                  <tr className="itit_menu_category-title">
+                    <td className="itit_menu_category-title_text">
+                      ストレート
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="itit_menu_menu-name">縮毛矯正</td>
+                    <td className="itit_menu_menu-price">¥4,000</td>
+                  </tr>
+                  <tr>
+                    <td className="itit_menu_menu-name">
+                      酸性ストレートパーマ
+                    </td>
+                    <td className="itit_menu_menu-price">¥8,000〜</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
         </main>
       </div>
     </>

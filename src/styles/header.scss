@@ -1,4 +1,4 @@
-@import "./variables.scss";
+@use "./variables.scss";
 
 .itit_header {
   &_group {
@@ -18,13 +18,12 @@
   &_title {
     align-items: center;
     margin-left: 32px;
-    font-size: 32px;
+    font-size: 28px;
   }
   &_p-group {
     display: flex;
     align-items: center;
     margin-right: 30px;
-    font-size: 20px;
   }
 
   &_p {
