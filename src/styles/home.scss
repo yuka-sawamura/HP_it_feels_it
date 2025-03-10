@@ -28,32 +28,44 @@
 }
 
 .itit_menu {
+  background-color: #fffef8;
   &_title {
     font-size: 40px;
     text-align: center;
     margin: 60px;
   }
-
   &_price-table {
     display: flex;
     justify-content: center;
     gap: 80px;
-    padding: 20px;
+    width: 100%;
+    margin-bottom: 70px;
+  }
+  &_table {
+    border: 1px solid #eacda8;
+    padding-left: 10px;
   }
   &_price-category {
+    border-collapse: collapse;
+    width: 450px;
+    height: 180px;
+  }
+  &_price-category2 {
     width: 450px;
     height: 120px;
-    border: 1px solid #eacda8;
+    border-collapse: collapse;
+    border-spacing: 0;
   }
   &_category-title {
     font-size: 20px;
     padding: 10px;
     text-align: center;
-    font-weight: bold;
-    border-bottom: 1px solid #eacda8;
   }
-  &_menu-name {
-    padding: 10px;
-    text-align: left;
+  &_category-title_text {
+    font-size: 32px;
+    padding: 16px;
+  }
+  &_name {
+    padding: 20px;
   }
 }

@@ -44,47 +44,46 @@ export default function Home() {
               <div className="itit_menu_group">
                 <h1 className="itit_menu_title">メニューと料金</h1>
               </div>
-            </div>
-            <div className="itit_menu_price-table">
-              <table className="itit_menu_price-category">
-                <tbody>
-                  <tr className="itit_menu_category-title">
-                    <td className="itit_menu_category-title_text">ヘア</td>
-                  </tr>
-                  <tr className="itit_menu_menu-gruop">
-                    <td className="itit_menu_menu-name">カット</td>
-                    <td className="itit_menu_menu-price">¥4,000</td>
-                  </tr>
-                  <tr className="itit_menu_menu-gruop">
-                    <td className="itit_menu_menu-name">カット・カラー</td>
-                    <td className="itit_menu_menu-price">¥8,000〜</td>
-                  </tr>
-                  <tr className="itit_menu_menu-gruop">
-                    <td className="itit_menu_menu-name">カット・パーマ</td>
-                    <td className="itit_menu_menu-price">¥8,000〜</td>
-                  </tr>
-                </tbody>
-              </table>
 
-              <table className="itit_menu_price-category">
-                <tbody>
-                  <tr className="itit_menu_category-title">
-                    <td className="itit_menu_category-title_text">
-                      ストレート
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="itit_menu_menu-name">縮毛矯正</td>
-                    <td className="itit_menu_menu-price">¥4,000</td>
-                  </tr>
-                  <tr>
-                    <td className="itit_menu_menu-name">
-                      酸性ストレートパーマ
-                    </td>
-                    <td className="itit_menu_menu-price">¥8,000〜</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div className="itit_menu_price-table">
+                <table className="itit_menu_price-category">
+                  <tbody>
+                    <tr className="itit_menu_category-title">
+                      <td className="itit_menu_category-title_text">ヘア</td>
+                    </tr>
+                    <tr className="itit_menu_table">
+                      <td className="itit_menu_name">カット</td>
+                      <td className="itit_menu_price">¥4,000</td>
+                    </tr>
+                    <tr className="itit_menu_table">
+                      <td className="itit_menu_name">カット・カラー</td>
+                      <td className="itit_menu_price">¥8,000〜</td>
+                    </tr>
+                    <tr className="itit_menu_table">
+                      <td className="itit_menu_name">カット・パーマ</td>
+                      <td className="itit_menu_price">¥8,000〜</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <table className="itit_menu_price-category2">
+                  <tbody>
+                    <tr className="itit_menu_category-title">
+                      <td className="itit_menu_category-title_text">
+                        ストレート
+                      </td>
+                    </tr>
+                    <tr className="itit_menu_table">
+                      <td className="itit_menu_name">縮毛矯正</td>
+                      <td className="itit_menu_price">¥4,000</td>
+                    </tr>
+                    <tr className="itit_menu_table">
+                      <td className="itit_menu_name">酸性ストレートパーマ</td>
+                      <td className="itit_menu_price">¥8,000〜</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </section>
         </main>
