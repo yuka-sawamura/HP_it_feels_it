@@ -45,12 +45,23 @@
     border: 1px solid #eacda8;
     padding-left: 10px;
   }
+  &_price-table_title-gruop {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px;
+  }
+  &_price-table_title {
+    font-size: 32px;
+  }
+  &_price-table_title_2 {
+    font-size: 32px;
+  }
   &_price-category {
     border-collapse: collapse;
     width: 450px;
     height: 180px;
   }
-  &_price-category2 {
+  &_price-category_2 {
     width: 450px;
     height: 120px;
     border-collapse: collapse;
@@ -67,5 +78,18 @@
   }
   &_name {
     padding: 20px;
+  }
+  &_name_1 {
+    padding: 10px;
+  }
+  &_price-table_title_3 {
+    display: flex;
+    font-size: 32px;
+    margin: 20px;
+  }
+  &_price-category_3 {
+    width: 450px;
+    height: 66px;
+    border-collapse: collapse;
   }
 }
