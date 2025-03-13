@@ -44,108 +44,156 @@ export default function Home() {
               <div className="itit_menu_group">
                 <h1 className="itit_menu_title">メニューと料金</h1>
               </div>
+              <div className="itit_menu_price-table_group">
+                <div className="itit_menu_price-table">
+                  <p className="itit_menu_price-table_title">ヘア</p>
+                  <ul className="itit_menu_price-table_list">
+                    <li className="itit_menu_price-table_list_item">
+                      <span className="itit_menu_price-table_list_item_name">
+                        カット
+                      </span>
+                      <span className="itit_menu_price-table_list_item_price">
+                        ¥4,000
+                      </span>
+                    </li>
+                    <li className="itit_menu_price-table_list_item">
+                      <span className="itit_menu_price-table_list_item_name">
+                        カット・カラー
+                      </span>
+                      <span className="itit_menu_price-table_list_item_price">
+                        ¥8,000〜
+                      </span>
+                    </li>
+                    <li className="itit_menu_price-table_list_item">
+                      <span className="itit_menu_price-table_list_item_name">
+                        カット・パーマ
+                      </span>
+                      <span className="itit_menu_price-table_list_item_price">
+                        ¥8,000〜
+                      </span>
+                    </li>
+                  </ul>
+                </div>
 
-              <div className="itit_menu_price-table_title-gruop">
-                <p className="itit_menu_price-table_title">ヘア</p>
-                <p className="itit_menu_price-table_title_2">ストレート</p>
-              </div>
-              <div className="itit_menu_price-table">
-                <table className="itit_menu_price-category">
-                  <tbody>
-                    <tr className="itit_menu_table">
-                      <td className="itit_menu_name">カット</td>
-                      <td className="itit_menu_price">¥4,000</td>
-                    </tr>
-                    <tr className="itit_menu_table">
-                      <td className="itit_menu_name">カット・カラー</td>
-                      <td className="itit_menu_price">¥8,000〜</td>
-                    </tr>
-                    <tr className="itit_menu_table">
-                      <td className="itit_menu_name">カット・パーマ</td>
-                      <td className="itit_menu_price">¥8,000〜</td>
-                    </tr>
-                  </tbody>
-                </table>
-
-                <table className="itit_menu_price-category_2">
-                  <tbody>
-                    <tr className="itit_menu_category-title"></tr>
-                    <tr className="itit_menu_table">
-                      <td className="itit_menu_name">縮毛矯正</td>
-                      <td className="itit_menu_price">¥4,000</td>
-                    </tr>
-                    <tr className="itit_menu_table">
-                      <td className="itit_menu_name">酸性ストレートパーマ</td>
-                      <td className="itit_menu_price">¥8,000〜</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-              <div>
-                <p className="itit_menu_price-table_title_3">ハイライト</p>
-              </div>
-              <div className="itit_menu_price-table">
-                <table className="itit_menu_price-category">
-                  <tbody>
-                    <tr className="itit_menu_table">
-                      <td className="itit_menu_name">ハイライトS</td>
-                      <td className="itit_menu_price">¥4,000</td>
-                    </tr>
-                    <tr className="itit_menu_table">
-                      <td className="itit_menu_name">ハイライトM</td>
-                      <td className="itit_menu_price">¥8,000〜</td>
-                    </tr>
-                    <tr className="itit_menu_table">
-                      <td className="itit_menu_name">ハイライトL</td>
-                      <td className="itit_menu_price">¥8,000〜</td>
-                    </tr>
-                  </tbody>
-                </table>
-
-                <table className="itit_menu_price-category_3">
-                  <tbody>
-                    <tr className="itit_menu_table">
-                      <td className="itit_menu_name_1">トリートメント</td>
-                      <td className="itit_menu_price">¥4,000〜</td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div className="itit_menu_price-table">
+                  <p className="itit_menu_price-table_title">ストレート</p>
+                  <ul className="itit_menu_price-table_list">
+                    <li className="itit_menu_price-table_list_item">
+                      <span className="itit_menu_price-table_list_item_name">
+                        縮毛矯正
+                      </span>
+                      <span className="itit_menu_price-table_list_item_price">
+                        ¥4,000
+                      </span>
+                    </li>
+                    <li className="itit_menu_price-table_list_item">
+                      <span className="itit_menu_price-table_list_item_name">
+                        酸性ストレートパーマ
+                      </span>
+                      <span className="itit_menu_price-table_list_item_price">
+                        ¥8,000〜
+                      </span>
+                    </li>
+                  </ul>
+                </div>
               </div>
 
-              <div>
-                <p className="itit_menu_price-table_title_3">出張</p>
-              </div>
-              <div className="itit_menu_price-table">
-                <table className="itit_menu_price-category">
-                  <tbody>
-                    <tr className="itit_menu_table">
-                      <td className="itit_menu_name">カット</td>
-                      <td className="itit_menu_price">¥2,000</td>
-                    </tr>
-                    <tr className="itit_menu_table">
-                      <td className="itit_menu_name">カット＋顔剃り</td>
-                      <td className="itit_menu_price">¥2500</td>
-                    </tr>
-                    <tr className="itit_menu_table">
-                      <td className="itit_menu_name">顔剃り</td>
-                      <td className="itit_menu_price">¥1000</td>
-                    </tr>
-                    <tr className="itit_menu_table">
-                      <td className="itit_menu_name">カット＋顔剃り＋カラー</td>
-                      <td className="itit_menu_price">¥5,000</td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div className="itit_menu_price-table_group">
+                <div className="itit_menu_price-table">
+                  <p className="itit_menu_price-table_title">ハイライト</p>
+                  <ul className="itit_menu_price-table_list">
+                    <li className="itit_menu_price-table_list_item">
+                      <span className="itit_menu_price-table_list_item_name">
+                        ハイライトS
+                      </span>
+                      <span className="itit_menu_price-table_list_item_price">
+                        ¥4,000
+                      </span>
+                    </li>
+                    <li className="itit_menu_price-table_list_item">
+                      <span className="itit_menu_price-table_list_item_name">
+                        ハイライトM
+                      </span>
+                      <span className="itit_menu_price-table_list_item_price">
+                        ¥8,000〜
+                      </span>
+                    </li>
+                    <li className="itit_menu_price-table_list_item">
+                      <span className="itit_menu_price-table_list_item_name">
+                        ハイライトL
+                      </span>
+                      <span className="itit_menu_price-table_list_item_price">
+                        ¥8,000〜
+                      </span>
+                    </li>
+                  </ul>
+                </div>
 
-                <table className="itit_menu_price-category_3">
-                  <tbody>
-                    <tr className="itit_menu_table">
-                      <td className="itit_menu_name_1">自宅出張</td>
-                      <td className="itit_menu_price">¥5,000</td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div className="itit_menu_price-table">
+                  <ul className="itit_menu_price-table_list">
+                    <li className="itit_menu_price-table_list_item">
+                      <span className="itit_menu_price-table_list_item_name">
+                        トリートメント
+                      </span>
+                      <span className="itit_menu_price-table_list_item_price">
+                        ¥4,000
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="itit_menu_price-table_group">
+                <div className="itit_menu_price-table">
+                  <p className="itit_menu_price-table_title">出張</p>
+                  <ul className="itit_menu_price-table_list">
+                    <li className="itit_menu_price-table_list_item">
+                      <span className="itit_menu_price-table_list_item_name">
+                        カット
+                      </span>
+                      <span className="itit_menu_price-table_list_item_price">
+                        ¥2,000
+                      </span>
+                    </li>
+                    <li className="itit_menu_price-table_list_item">
+                      <span className="itit_menu_price-table_list_item_name">
+                        カット＋顔剃り
+                      </span>
+                      <span className="itit_menu_price-table_list_item_price">
+                        ¥2,500
+                      </span>
+                    </li>
+                    <li className="itit_menu_price-table_list_item">
+                      <span className="itit_menu_price-table_list_item_name">
+                        顔剃り
+                      </span>
+                      <span className="itit_menu_price-table_list_item_price">
+                        ¥1,000
+                      </span>
+                    </li>
+                    <li className="itit_menu_price-table_list_item">
+                      <span className="itit_menu_price-table_list_item_name">
+                        カット＋顔剃り＋カラー
+                      </span>
+                      <span className="itit_menu_price-table_list_item_price">
+                        ¥5,000
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="itit_menu_price-table">
+                  <ul className="itit_menu_price-table_list">
+                    <li className="itit_menu_price-table_list_item">
+                      <span className="itit_menu_price-table_list_item_name">
+                        自宅出張
+                      </span>
+                      <span className="itit_menu_price-table_list_item_price">
+                        ¥5,000
+                      </span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </section>
