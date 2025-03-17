@@ -197,6 +197,41 @@ export default function Home() {
               </div>
             </div>
           </section>
+
+          <section className="itit_payment_method">
+            <div className="itit_payment_method_group">
+              <h1 className="itit_payment_method_title">お支払い方法</h1>
+            </div>
+            <div className="itit_payment_method_list">
+              <div className="itit_payment_method_item">
+                <img
+                  className="itit_payment_method_image"
+                  src="/cash.png"
+                  alt="現金"
+                />
+                <span className="itit_payment_method_badge">1</span>
+                <p className="itit_payment_method_text">現金</p>
+              </div>
+              <div className="itit_payment_method_item">
+                <img
+                  className="itit_payment_method_image"
+                  src="/creditcard.png"
+                  alt="クレジットカード"
+                />
+                <span className="itit_payment_method_badge">2</span>
+                <p className="itit_payment_method_text">クレジットカード</p>
+              </div>
+              <div className="itit_payment_method_item">
+                <img
+                  className="itit_payment_method_image"
+                  src="/qric.png"
+                  alt="QR・電子マネー"
+                />
+                <span className="itit_payment_method_badge">3</span>
+                <p className="itit_payment_method_text">QR, 電子マネー</p>
+              </div>
+            </div>
+          </section>
         </main>
       </div>
     </>
