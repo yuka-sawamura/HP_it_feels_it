@@ -232,6 +232,19 @@ export default function Home() {
               </div>
             </div>
           </section>
+
+          <section>
+            <div className="itit_reservation">
+              <div className="itit_reservation_group">
+                <h1 className="itit_reservation_title">ご予約</h1>
+                <p className="itit_reservation_text">
+                  当店は完全予約制です
+                  <br /> ご予約は電話にて承っています <br /> AM 09:00〜PM
+                  18:00(月曜定休)
+                </p>
+              </div>
+            </div>
+          </section>
         </main>
       </div>
     </>
