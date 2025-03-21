@@ -239,9 +239,18 @@ export default function Home() {
                 <h1 className="itit_reservation_title">ご予約</h1>
                 <p className="itit_reservation_text">
                   当店は完全予約制です
-                  <br /> ご予約は電話にて承っています <br /> AM 09:00〜PM
-                  18:00(月曜定休)
+                  <br /> ご予約は電話にて承っています <br />
+                  AM 09:00〜PM 18:00(月曜定休)
                 </p>
+                <p className="itit_reservation_tel">tel: 0178-96-2581</p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <div className="itit_staff">
+              <div className="itit_staff_group">
+                <h1 className="itit_staff_title">スタッフ</h1>
               </div>
             </div>
           </section>
