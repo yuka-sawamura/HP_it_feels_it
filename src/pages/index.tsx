@@ -130,6 +130,7 @@ export default function Home() {
                 </div>
 
                 <div className="itit_menu_price-table">
+                  <p className="itit_menu_price-table_title">トリートメント</p>
                   <ul className="itit_menu_price-table_list">
                     <li className="itit_menu_price-table_list_item">
                       <span className="itit_menu_price-table_list_item_name">
@@ -183,6 +184,7 @@ export default function Home() {
                 </div>
 
                 <div className="itit_menu_price-table">
+                  <p className="itit_menu_price-table_title">自宅出張</p>
                   <ul className="itit_menu_price-table_list">
                     <li className="itit_menu_price-table_list_item">
                       <span className="itit_menu_price-table_list_item_name">
@@ -247,10 +249,26 @@ export default function Home() {
             </div>
           </section>
 
-          <section>
-            <div className="itit_staff">
-              <div className="itit_staff_group">
-                <h1 className="itit_staff_title">スタッフ</h1>
+          <section className="staff">
+            <h2 className="staff_title">スタッフ</h2>
+            <div className="staff_list">
+              <div className="staff_item">
+                <div className="staff_image"></div>
+                <p className="staff_role">ヘアスタイリスト</p>
+                <h3 className="staff_name">ヤマミチ アツシ</h3>
+                <p className="staff_message">いつも楽しくをモットーに！</p>
+              </div>
+              <div className="staff_item">
+                <div className="staff_image"></div>
+                <p className="staff_role">ヘアスタイリスト</p>
+                <h3 className="staff_name">ヤマミチ アツシ</h3>
+                <p className="staff_message">いつも楽しくをモットーに！</p>
+              </div>
+              <div className="staff_item">
+                <div className="staff_image"></div>
+                <p className="staff_role">ヘアスタイリスト</p>
+                <h3 className="staff_name">ヤマミチ アツシ</h3>
+                <p className="staff_message">いつも楽しくをモットーに！</p>
               </div>
             </div>
           </section>
