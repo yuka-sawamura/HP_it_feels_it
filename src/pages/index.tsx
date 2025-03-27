@@ -208,7 +208,7 @@ export default function Home() {
               <div className="itit_payment_method_item">
                 <img
                   className="itit_payment_method_image"
-                  src="/cash.png"
+                  src="/Cash.svg"
                   alt="現金"
                 />
                 <span className="itit_payment_method_badge">1</span>
@@ -217,7 +217,7 @@ export default function Home() {
               <div className="itit_payment_method_item">
                 <img
                   className="itit_payment_method_image"
-                  src="/creditcard.png"
+                  src="/CreditCard.svg"
                   alt="クレジットカード"
                 />
                 <span className="itit_payment_method_badge">2</span>
@@ -226,7 +226,7 @@ export default function Home() {
               <div className="itit_payment_method_item">
                 <img
                   className="itit_payment_method_image"
-                  src="/qric.png"
+                  src="/IC-QR.svg"
                   alt="QR・電子マネー"
                 />
                 <span className="itit_payment_method_badge">3</span>
@@ -269,6 +269,26 @@ export default function Home() {
                 <p className="staff_role">ヘアスタイリスト</p>
                 <h3 className="staff_name">ヤマミチ アツシ</h3>
                 <p className="staff_message">いつも楽しくをモットーに！</p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <div className="itit_information">
+              <div className="itit_information_group">
+                <h2 className="itit_information_title">新着情報</h2>
+                <p className="itit_information_subtitle">(Instagram)</p>
+              </div>
+              <div className="itit_information_instagram">
+                <div className="itit_information_instagram-item">
+                  <img
+                    className="itit_information_instagram-logo"
+                    src="/Instagram_logo.svg"
+                    alt="Instagram画像"
+                  />
+                  <p className="itit_information_instagram_name">itfeelsit</p>
+                  <p className="itit_information_instagram_date">2024/01/01</p>
+                </div>
               </div>
             </div>
           </section>
