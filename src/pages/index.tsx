@@ -39,10 +39,12 @@ export default function Home() {
             </div>
           </div>
 
-          <section>
+          <section id="#menu">
             <div className="itit_menu">
               <div className="itit_menu_group">
-                <h1 className="itit_menu_title">メニューと料金</h1>
+                <h1 className="itit_menu_title">
+                  <a href="#menu">メニューと料金</a>
+                </h1>
               </div>
               <div className="itit_menu_price-table_group">
                 <div className="itit_menu_price-table">
@@ -279,16 +281,81 @@ export default function Home() {
                 <h2 className="itit_information_title">新着情報</h2>
                 <p className="itit_information_subtitle">(Instagram)</p>
               </div>
-              <div className="itit_information_instagram">
-                <div className="itit_information_instagram-item">
+              <div className="itit_information_instagram_group">
+                <div className="itit_information_instagram">
+                  <div className="itit_information_instagram_item">
+                    <img
+                      className="itit_information_instagram_logo"
+                      src="/Instagram_logo.svg"
+                      alt="Instagram画像"
+                    />
+                    <p className="itit_information_instagram_name">itfeelsit</p>
+                    <p className="itit_information_instagram_date">
+                      2024/01/01
+                    </p>
+                  </div>
                   <img
-                    className="itit_information_instagram-logo"
-                    src="/Instagram_logo.svg"
-                    alt="Instagram画像"
+                    className="itit_information_instagram_image"
+                    src="/staff.png"
+                    alt="スタッフ画像"
                   />
-                  <p className="itit_information_instagram_name">itfeelsit</p>
-                  <p className="itit_information_instagram_date">2024/01/01</p>
+                  <p className="itit_information_instagram_text">
+                    今年も皆様のおかげで無事に1年終えることができました🥲 ....
+                  </p>
+                  <p className="itit_information_instagram_more">もっと読む→</p>
                 </div>
+                <div className="itit_information_instagram">
+                  <div className="itit_information_instagram_item">
+                    <img
+                      className="itit_information_instagram_logo"
+                      src="/Instagram_logo.svg"
+                      alt="Instagram画像"
+                    />
+                    <p className="itit_information_instagram_name">itfeelsit</p>
+                    <p className="itit_information_instagram_date">
+                      2024/01/01
+                    </p>
+                  </div>
+                  <img
+                    className="itit_information_instagram_image"
+                    src="/staff.png"
+                    alt="スタッフ画像"
+                  />
+                  <p className="itit_information_instagram_text">
+                    今年も皆様のおかげで無事に1年終えることができました🥲 ....
+                  </p>
+                  <p className="itit_information_instagram_more">もっと読む→</p>
+                </div>
+                <div className="itit_information_instagram">
+                  <div className="itit_information_instagram_item">
+                    <img
+                      className="itit_information_instagram_logo"
+                      src="/Instagram_logo.svg"
+                      alt="Instagram画像"
+                    />
+                    <p className="itit_information_instagram_name">itfeelsit</p>
+                    <p className="itit_information_instagram_date">
+                      2024/01/01
+                    </p>
+                  </div>
+                  <img
+                    className="itit_information_instagram_image"
+                    src="/staff.png"
+                    alt="スタッフ画像"
+                  />
+                  <p className="itit_information_instagram_text">
+                    今年も皆様のおかげで無事に1年終えることができました🥲 ....
+                  </p>
+                  <p className="itit_information_instagram_more">もっと読む→</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <div className="itit_access">
+              <div className="itit_access_group">
+                <h2 className="itit_access_title">アクセス</h2>
               </div>
             </div>
           </section>

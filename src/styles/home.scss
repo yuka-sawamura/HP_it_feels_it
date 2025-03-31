@@ -171,6 +171,7 @@
 }
 
 .itit_information {
+  margin-bottom: 80px;
   &_group {
     text-align: center;
     margin-bottom: 80px;
@@ -185,18 +186,46 @@
   &_instagram {
     border: 1px solid #d4d4d4;
     width: 300px;
-    height: 420px;
-    &-item {
+    height: 450px;
+    &_group {
+      display: flex;
+      justify-content: center;
+      column-gap: 50px;
+    }
+    &_item {
       display: flex;
     }
     &_logo {
-      padding: 5px;
+      padding: 8px;
     }
     &_name {
-      padding: 5px;
+      padding: 8px;
     }
     &_date {
-      padding: 5px;
+      padding: 8px 20px;
+      margin-left: auto;
     }
+    &_image {
+      width: 298px;
+      height: 280px;
+    }
+    &_text {
+      padding: 10px;
+    }
+    &_more {
+      padding: 10px;
+      text-align: right;
+      text-decoration: underline;
+    }
+  }
+}
+
+.itit_access {
+  &_group {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+  &_title {
+    font-size: 40px;
   }
 }
