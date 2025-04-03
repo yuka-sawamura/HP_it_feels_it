@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -39,12 +40,10 @@ export default function Home() {
             </div>
           </div>
 
-          <section id="#menu">
+          <section id="menu">
             <div className="itit_menu">
               <div className="itit_menu_group">
-                <h1 className="itit_menu_title">
-                  <a href="#menu">メニューと料金</a>
-                </h1>
+                <h1 className="itit_menu_title">メニューと料金</h1>
               </div>
               <div className="itit_menu_price-table_group">
                 <div className="itit_menu_price-table">
@@ -251,7 +250,7 @@ export default function Home() {
             </div>
           </section>
 
-          <section className="staff">
+          <section id="staff" className="staff">
             <h2 className="staff_title">スタッフ</h2>
             <div className="staff_list">
               <div className="staff_item">
@@ -275,7 +274,7 @@ export default function Home() {
             </div>
           </section>
 
-          <section>
+          <section id="information">
             <div className="itit_information">
               <div className="itit_information_group">
                 <h2 className="itit_information_title">新着情報</h2>
@@ -352,7 +351,7 @@ export default function Home() {
             </div>
           </section>
 
-          <section>
+          <section id="access">
             <div className="itit_access">
               <div className="itit_access_group">
                 <h2 className="itit_access_title">アクセス</h2>
@@ -361,6 +360,30 @@ export default function Home() {
           </section>
 
           <section>
+            <div className="itit_ReFa">
+              <div className="itit_ReFa_group">
+                <div>
+                  <img
+                    className="itit_ReFa_image"
+                    src="/ReFa.png"
+                    alt="ReFaの画像"
+                  />
+                </div>
+                <div className="itit_ReFa_text-group">
+                  <h2 className="itit_ReFa_title">ReFa 商品をご購入できます</h2>
+                  <p className="itit_ReFa_text">
+                    メーカー直営オンラインショップ（B happy）での 買い物が可能！
+                  </p>
+                  <p className="itit_ReFa_text">
+                    B happy会員限定クーポンプレゼント
+                  </p>
+                  <p className="itit_ReFa_text">お買い物ポイント付与</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="visit-beauty">
             <div className="itit_visit-beauty">
               <div className="itit_visit-beauty_group">
                 <div>
@@ -383,6 +406,7 @@ export default function Home() {
             </div>
           </section>
         </main>
+        <Footer />
       </div>
     </>
   );

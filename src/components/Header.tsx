@@ -13,16 +13,16 @@ const Header = () => {
               <a href="#menu">メニュー</a>
             </li>
             <li className="itit_header_p">
-              <a href="#">スタッフ</a>
+              <a href="#staff">スタッフ</a>
             </li>
             <li className="itit_header_p">
-              <a href="#">アクセス</a>
+              <a href="#information">新着情報</a>
             </li>
             <li className="itit_header_p">
-              <a href="#">ギャラリー</a>
+              <a href="#access">アクセス</a>
             </li>
             <li className="itit_header_p">
-              <a href="#">訪問美容</a>
+              <a href="#visit-beauty">訪問美容</a>
             </li>
           </ul>
         </div>
