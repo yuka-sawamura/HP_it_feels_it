@@ -253,7 +253,11 @@
   }
   &_text {
     font-size: 20px;
-    padding: 20px 0;
+    padding: 16px 0;
+  }
+  &_text-list {
+    list-style-image: url("/check.svg");
+    vertical-align: middle;
   }
 }
 

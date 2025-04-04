@@ -371,13 +371,16 @@ export default function Home() {
                 </div>
                 <div className="itit_ReFa_text-group">
                   <h2 className="itit_ReFa_title">ReFa 商品をご購入できます</h2>
-                  <p className="itit_ReFa_text">
-                    メーカー直営オンラインショップ（B happy）での 買い物が可能！
-                  </p>
-                  <p className="itit_ReFa_text">
-                    B happy会員限定クーポンプレゼント
-                  </p>
-                  <p className="itit_ReFa_text">お買い物ポイント付与</p>
+                  <ul className="itit_ReFa_text-list">
+                    <li className="itit_ReFa_text">
+                      メーカー直営オンラインショップ（B happy）での
+                      買い物が可能！
+                    </li>
+                    <li className="itit_ReFa_text">
+                      B happy会員限定クーポンプレゼント
+                    </li>
+                    <li className="itit_ReFa_text">お買い物ポイント付与</li>
+                  </ul>
                 </div>
               </div>
             </div>

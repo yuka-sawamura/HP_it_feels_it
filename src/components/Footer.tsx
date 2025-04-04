@@ -12,7 +12,11 @@ const Footer = () => {
         <p className="itit_footer_text">
           AM 09:00〜PM 18:00(月曜定休) <br /> ※完全予約制
         </p>
-        <img src="/Instagram_icon.svg" alt="インスタグラムロゴ" />
+        <img
+          className="itit_footer_icon"
+          src="/Instagram_icon.svg"
+          alt="インスタグラムロゴ"
+        />
         <p className="itit_footer_text">
           ©2025 it feels it. All Right Reserved.
         </p>
