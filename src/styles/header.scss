@@ -10,8 +10,6 @@
     opacity: 0.9;
     display: flex;
     justify-content: space-between;
-    .sp {
-    }
   }
   &_text {
     display: flex;
@@ -27,12 +25,14 @@
     align-items: center;
     margin-right: 30px;
   }
-
   &_p {
     margin-right: 20px;
     font-size: 20px;
-    .sp {
-      display: none;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
     }
   }
   &_pages-group {
@@ -48,6 +48,12 @@
     color: #ffffff;
     font-weight: bold;
     font-size: 20px;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+    }
   }
 }
 

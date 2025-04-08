@@ -23,6 +23,12 @@
 
   &_text_phone {
     font-size: 18px;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+    }
   }
   &_image {
     width: 1500px;
@@ -218,7 +224,12 @@
     &_more {
       padding: 10px;
       text-align: right;
-      text-decoration: underline;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+      }
     }
   }
 }

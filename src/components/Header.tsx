@@ -22,7 +22,7 @@ const Header = () => {
               <a href="#access">アクセス</a>
             </li>
             <li className="itit_header_p">
-              <a href="#visit-beauty">訪問美容</a>
+              <a href="#visit-beauty">訪問理美容</a>
             </li>
           </ul>
         </div>
