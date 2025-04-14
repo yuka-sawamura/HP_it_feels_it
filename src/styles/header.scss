@@ -1,4 +1,5 @@
 @use "./variables.scss";
+@import "variables"; // 変数ファイルのインポート
 
 .itit_header {
   &_group {
@@ -13,12 +14,19 @@
   }
   &_text {
     display: flex;
-    gap: 80px;
+    @include pc {
+      gap: 80px;
+    }
   }
   &_title {
+    display: flex;
     align-items: center;
     margin-left: 32px;
-    font-size: 28px;
+    font-size: 32px;
+    @include sp {
+      font-size: 20px;
+      margin-left: 16px;
+    }
   }
   &_p-group {
     display: flex;
@@ -26,6 +34,12 @@
     margin-right: 30px;
   }
   &_p {
+    @include sp {
+      display: none;
+    }
+    @include pc {
+      display: block;
+    }
     margin-right: 20px;
     font-size: 20px;
     text-decoration: none;
@@ -39,20 +53,31 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 180px;
     height: 50px;
-    background-color: #e2734b;
+    @include pc {
+      width: 180px;
+      background-color: #e2734b;
+    }
+    @include sp {
+      width: 140px;
+    }
   }
   &_pages {
     display: flex;
     color: #ffffff;
     font-weight: bold;
-    font-size: 20px;
     text-decoration: none;
+    @include pc {
+      font-size: 20px;
+    }
 
     &:hover {
       text-decoration: underline;
       text-decoration-thickness: 1px;
+    }
+    @include sp {
+      color: #e2734b;
+      border-bottom: 1px solid #e2734b;
     }
   }
 }

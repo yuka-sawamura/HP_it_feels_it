@@ -362,7 +362,7 @@ export default function Home() {
           <section>
             <div className="itit_ReFa">
               <div className="itit_ReFa_group">
-                <div>
+                <div className="itit_ReFa_image-group">
                   <img
                     className="itit_ReFa_image"
                     src="/ReFa.png"
@@ -373,13 +373,29 @@ export default function Home() {
                   <h2 className="itit_ReFa_title">ReFa 商品をご購入できます</h2>
                   <ul className="itit_ReFa_text-list">
                     <li className="itit_ReFa_text">
-                      メーカー直営オンラインショップ（B happy）での
-                      買い物が可能！
+                      <img
+                        src="/check.svg"
+                        alt="チェックマーク"
+                        className="itit_ReFa_text_list_check"
+                      />
+                      メーカー直営オンラインショップ(B happy)での買い物が可能！
                     </li>
                     <li className="itit_ReFa_text">
+                      <img
+                        src="/check.svg"
+                        alt="チェックマーク"
+                        className="itit_ReFa_text_list_check"
+                      />
                       B happy会員限定クーポンプレゼント
                     </li>
-                    <li className="itit_ReFa_text">お買い物ポイント付与</li>
+                    <li className="itit_ReFa_text">
+                      <img
+                        src="/check.svg"
+                        alt="チェックマーク"
+                        className="itit_ReFa_text_list_check"
+                      />
+                      お買い物ポイント付与
+                    </li>
                   </ul>
                 </div>
               </div>

@@ -135,6 +135,12 @@
     font-size: 20px;
     text-align: center;
     padding-bottom: 40px;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+    }
   }
 }
 
@@ -245,29 +251,51 @@
 }
 
 .itit_ReFa {
-  margin: 40px;
+  background-color: #f5f1f0;
+  width: 100%;
+
   &_group {
-    padding-top: 40px;
     display: flex;
     justify-content: center;
-    column-gap: 64px;
+    align-items: center;
+    column-gap: 80px;
   }
+
+  &_image-group {
+    padding: 16px 80px;
+  }
+
   &_image {
     width: 250px;
     height: 250px;
   }
+
   &_title {
     font-size: 32px;
   }
+
   &_text-group {
     text-align: left;
   }
+
+  &_text-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
   &_text {
+    display: flex;
+    align-items: center;
     font-size: 20px;
     padding: 16px 0;
-  }
-  &_text-list {
-    list-style-image: url("/check.svg");
+
+    &_icon {
+      width: 20px;
+      height: 20px;
+      margin-right: 12px;
+      display: block;
+    }
   }
 }
 
