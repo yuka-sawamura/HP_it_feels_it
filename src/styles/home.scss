@@ -1,3 +1,6 @@
+@use "./variables.scss";
+@import "variables";
+
 .itit_top {
   &_group {
     position: relative;
@@ -14,6 +17,9 @@
     border-radius: 16px 16px 0 0;
     width: 400px;
     height: 88px;
+    @include sp {
+      display: none;
+    }
   }
 
   &_text_p {
@@ -30,9 +36,35 @@
       text-decoration-thickness: 1px;
     }
   }
+  &_phone-link-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    @include pc {
+      display: none;
+    }
+  }
+  &_phone-link {
+    font-size: 24px;
+    background-color: #ea6030;
+    color: white;
+    width: 330px;
+    height: 50px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+  }
   &_image {
     width: 1500px;
     height: 600px;
+    @include sp {
+      width: 644px;
+      height: 530px;
+    }
   }
 }
 

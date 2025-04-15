@@ -32,6 +32,9 @@ export default function Home() {
                 <p className="itit_top_text_p">ご予約はお電話でお受けします</p>
                 <p className="itit_top_text_phone">0178-96-2581</p>
               </div>
+              <div className="itit_top_phone-link-group">
+                <p className="itit_top_phone-link">電話する</p>
+              </div>
               <img
                 className="itit_top_image"
                 src="/it-feels-it-top-image.png"
