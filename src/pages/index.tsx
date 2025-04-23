@@ -35,11 +35,18 @@ export default function Home() {
               <div className="itit_top_phone-link-group">
                 <p className="itit_top_phone-link">電話する</p>
               </div>
-              <img
-                className="itit_top_image"
-                src="/it-feels-it-top-image.png"
-                alt="top-image画像"
-              />
+              <div className="itit_top_image-gruop">
+                <img
+                  className="itit_top_image-pc"
+                  src="/it-feels-it-top-image.png"
+                  alt="top-image pc画像"
+                />
+                <img
+                  className="itit_top_image-sp"
+                  src="/topimage_sp.png"
+                  alt="top-image sp画像"
+                />
+              </div>
             </div>
           </div>
 
@@ -215,8 +222,10 @@ export default function Home() {
                   src="/Cash.svg"
                   alt="現金"
                 />
-                <span className="itit_payment_method_badge">1</span>
-                <p className="itit_payment_method_text">現金</p>
+                <div className="itit_payment_method_item_group">
+                  <span className="itit_payment_method_badge">1</span>
+                  <p className="itit_payment_method_text">現金</p>
+                </div>
               </div>
               <div className="itit_payment_method_item">
                 <img
@@ -224,8 +233,10 @@ export default function Home() {
                   src="/CreditCard.svg"
                   alt="クレジットカード"
                 />
-                <span className="itit_payment_method_badge">2</span>
-                <p className="itit_payment_method_text">クレジットカード</p>
+                <div className="itit_payment_method_item_group">
+                  <span className="itit_payment_method_badge">2</span>
+                  <p className="itit_payment_method_text">クレジットカード</p>
+                </div>
               </div>
               <div className="itit_payment_method_item">
                 <img
@@ -233,8 +244,10 @@ export default function Home() {
                   src="/IC-QR.svg"
                   alt="QR・電子マネー"
                 />
-                <span className="itit_payment_method_badge">3</span>
-                <p className="itit_payment_method_text">QR, 電子マネー</p>
+                <div className="itit_payment_method_item_group">
+                  <span className="itit_payment_method_badge">3</span>
+                  <p className="itit_payment_method_text">QR, 電子マネー</p>
+                </div>
               </div>
             </div>
           </section>
