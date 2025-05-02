@@ -262,30 +262,37 @@ export default function Home() {
                   AM 09:00〜PM 18:00(月曜定休)
                 </p>
                 <p className="itit_reservation_tel">tel: 0178-96-2581</p>
+                <div className="itit_reservation_tel-link-group">
+                  <p className="itit_reservation_tel-link">0178-96-2581</p>
+                </div>
               </div>
             </div>
           </section>
 
-          <section id="staff" className="staff">
-            <h2 className="staff_title">スタッフ</h2>
-            <div className="staff_list">
-              <div className="staff_item">
-                <div className="staff_image"></div>
-                <p className="staff_role">ヘアスタイリスト</p>
-                <h3 className="staff_name">ヤマミチ アツシ</h3>
-                <p className="staff_message">いつも楽しくをモットーに！</p>
+          <section id="staff" className="itit_staff">
+            <h2 className="itit_staff_title">スタッフ</h2>
+            <div className="itit_staff_list">
+              <div className="itit_staff_item">
+                <div className="itit_staff_image"></div>
+                <p className="itit_staff_role">ヘアスタイリスト</p>
+                <h3 className="itit_staff_name">ヤマミチ アツシ</h3>
+                <p className="itit_staff_message">いつも楽しくをモットーに！</p>
+                <div className="itit_staff_arrow-group">
+                  <img src="/chevron_left.svg" alt="左矢印" />
+                  <img src="/chevron_right.svg" alt="右矢印" />
+                </div>
               </div>
-              <div className="staff_item">
-                <div className="staff_image"></div>
-                <p className="staff_role">ヘアスタイリスト</p>
-                <h3 className="staff_name">ヤマミチ アツシ</h3>
-                <p className="staff_message">いつも楽しくをモットーに！</p>
+              <div className="itit_staff_item">
+                <div className="itit_staff_image"></div>
+                <p className="itit_staff_role">ヘアスタイリスト</p>
+                <h3 className="itit_staff_name">ヤマミチ アツシ</h3>
+                <p className="itit_staff_message">いつも楽しくをモットーに！</p>
               </div>
-              <div className="staff_item">
-                <div className="staff_image"></div>
-                <p className="staff_role">ヘアスタイリスト</p>
-                <h3 className="staff_name">ヤマミチ アツシ</h3>
-                <p className="staff_message">いつも楽しくをモットーに！</p>
+              <div className="itit_staff_item">
+                <div className="itit_staff_image"></div>
+                <p className="itit_staff_role">ヘアスタイリスト</p>
+                <h3 className="itit_staff_name">ヤマミチ アツシ</h3>
+                <p className="itit_staff_message">いつも楽しくをモットーに！</p>
               </div>
             </div>
           </section>
@@ -340,6 +347,10 @@ export default function Home() {
                     今年も皆様のおかげで無事に1年終えることができました🥲 ....
                   </p>
                   <p className="itit_information_instagram_more">もっと読む→</p>
+                  <div className="itit_information_arrow-group">
+                    <img src="/chevron_left.svg" alt="左矢印" />
+                    <img src="/chevron_right.svg" alt="右矢印" />
+                  </div>
                 </div>
                 <div className="itit_information_instagram">
                   <div className="itit_information_instagram_item">
@@ -413,6 +424,9 @@ export default function Home() {
                       お買い物ポイント付与
                     </li>
                   </ul>
+                  <p className="itit_ReFa_text_sp">
+                    当店では、ReFaなどMTG製品をご購入できます。
+                  </p>
                 </div>
               </div>
             </div>
@@ -421,7 +435,7 @@ export default function Home() {
           <section id="visit-beauty">
             <div className="itit_visit-beauty">
               <div className="itit_visit-beauty_group">
-                <div>
+                <div className="itit_visit-beauty_image-group">
                   <img
                     className="itit_visit-beauty_image"
                     src="/visit-beauty.png"
