@@ -3,6 +3,14 @@ import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+
+// import required modules
+import { Navigation } from "swiper/modules";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -272,28 +280,69 @@ export default function Home() {
           <section id="staff" className="itit_staff">
             <h2 className="itit_staff_title">スタッフ</h2>
             <div className="itit_staff_list">
-              <div className="itit_staff_item">
-                <div className="itit_staff_image"></div>
-                <p className="itit_staff_role">ヘアスタイリスト</p>
-                <h3 className="itit_staff_name">ヤマミチ アツシ</h3>
-                <p className="itit_staff_message">いつも楽しくをモットーに！</p>
-                <div className="itit_staff_arrow-group">
-                  <img src="/chevron_left.svg" alt="左矢印" />
-                  <img src="/chevron_right.svg" alt="右矢印" />
-                </div>
-              </div>
-              <div className="itit_staff_item">
-                <div className="itit_staff_image"></div>
-                <p className="itit_staff_role">ヘアスタイリスト</p>
-                <h3 className="itit_staff_name">ヤマミチ アツシ</h3>
-                <p className="itit_staff_message">いつも楽しくをモットーに！</p>
-              </div>
-              <div className="itit_staff_item">
-                <div className="itit_staff_image"></div>
-                <p className="itit_staff_role">ヘアスタイリスト</p>
-                <h3 className="itit_staff_name">ヤマミチ アツシ</h3>
-                <p className="itit_staff_message">いつも楽しくをモットーに！</p>
-              </div>
+              <Swiper
+                navigation={{
+                  nextEl: "#staff-button-next",
+                  prevEl: "#staff-button-prev",
+                }}
+                modules={[Navigation]}
+                className="mySwiper"
+                breakpoints={{
+                  768: {
+                    slidesPerView: 3,
+                    spaceBetween: 10,
+                  },
+                }}
+              >
+                <SwiperSlide>
+                  <div className="itit_staff_item">
+                    <div className="itit_staff_image"></div>
+                    <p className="itit_staff_role">ヘアスタイリスト</p>
+                    <h3 className="itit_staff_name">ヤマミチ アツシ</h3>
+                    <p className="itit_staff_message">
+                      いつも楽しくをモットーに！
+                    </p>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="itit_staff_item">
+                    <div className="itit_staff_image"></div>
+                    <p className="itit_staff_role">ヘアスタイリスト</p>
+                    <h3 className="itit_staff_name">ヤマミチ アツシ</h3>
+                    <p className="itit_staff_message">
+                      いつも楽しくをモットーに！
+                    </p>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="itit_staff_item">
+                    <div className="itit_staff_image"></div>
+                    <p className="itit_staff_role">ヘアスタイリスト</p>
+                    <h3 className="itit_staff_name">ヤマミチ アツシ</h3>
+                    <p className="itit_staff_message">
+                      いつも楽しくをモットーに！
+                    </p>
+                  </div>
+                </SwiperSlide>
+              </Swiper>
+            </div>
+            <div className="itit_staff_arrow-group">
+              <button
+                id="staff-button-prev"
+                className=" itit_staff_arrow-group_button"
+                tabIndex={0}
+                role="button"
+              >
+                <img src="/chevron_left.svg" alt="左矢印" />
+              </button>
+              <button
+                id="staff-button-next"
+                className="itit_staff_arrow-group_button"
+                tabIndex={0}
+                role="button"
+              >
+                <img src="/chevron_right.svg" alt="右矢印" />
+              </button>
             </div>
           </section>
 
