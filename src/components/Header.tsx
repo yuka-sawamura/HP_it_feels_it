@@ -27,7 +27,9 @@ const Header = () => {
           </ul>
         </div>
         <div className="itit_header_pages-group">
-          <div className="itit_header_pages">脱毛ページ </div>
+          <a className="itit_header_pages" href="#">
+            脱毛ページ
+          </a>
         </div>
       </div>
     </header>

@@ -16,6 +16,13 @@
   &_text {
     padding: 4px;
   }
+  &_text1 {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+    }
+  }
   &_icon {
     padding: 6px;
   }

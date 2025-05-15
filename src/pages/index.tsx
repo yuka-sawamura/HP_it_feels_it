@@ -38,7 +38,9 @@ export default function Home() {
             <div className="itit_top_group">
               <div className="itit_top_text">
                 <p className="itit_top_text_p">ご予約はお電話でお受けします</p>
-                <p className="itit_top_text_phone">0178-96-2581</p>
+                <a className="itit_top_text_phone" href="#">
+                  0178-96-2581
+                </a>
               </div>
               <div className="itit_top_phone-link-group">
                 <p className="itit_top_phone-link">電話する</p>
@@ -269,9 +271,13 @@ export default function Home() {
                   <br /> ご予約は電話にて承っています <br />
                   AM 09:00〜PM 18:00(月曜定休)
                 </p>
-                <p className="itit_reservation_tel">tel: 0178-96-2581</p>
+                <a className="itit_reservation_tel" href="#">
+                  tel: 0178-96-2581
+                </a>
                 <div className="itit_reservation_tel-link-group">
-                  <p className="itit_reservation_tel-link">0178-96-2581</p>
+                  <a className="itit_reservation_tel-link" href="#">
+                    0178-96-2581
+                  </a>
                 </div>
               </div>
             </div>
@@ -351,79 +357,129 @@ export default function Home() {
               <div className="itit_information_group">
                 <h2 className="itit_information_title">新着情報</h2>
                 <p className="itit_information_subtitle">(Instagram)</p>
+                <div className="itit_information_instagram_group">
+                  <Swiper
+                    navigation={{
+                      nextEl: "#information-button-next",
+                      prevEl: "#information-button-prev",
+                    }}
+                    modules={[Navigation]}
+                    className="mySwiper"
+                    breakpoints={{
+                      768: {
+                        slidesPerView: 3,
+                        spaceBetween: 10,
+                      },
+                    }}
+                  >
+                    <SwiperSlide>
+                      <div className="itit_information_instagram">
+                        <div className="itit_information_instagram_item">
+                          <img
+                            className="itit_information_instagram_logo"
+                            src="/Instagram_logo.svg"
+                            alt="Instagram画像"
+                          />
+                          <p className="itit_information_instagram_name">
+                            itfeelsit
+                          </p>
+                          <p className="itit_information_instagram_date">
+                            2024/01/01
+                          </p>
+                        </div>
+                        <img
+                          className="itit_information_instagram_image"
+                          src="/staff.png"
+                          alt="スタッフ画像"
+                        />
+                        <p className="itit_information_instagram_text">
+                          今年も皆様のおかげで無事に1年終えることができました🥲
+                          ....
+                        </p>
+                        <a className="itit_information_instagram_more" href="#">
+                          もっと読む→
+                        </a>
+                      </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <div className="itit_information_instagram">
+                        <div className="itit_information_instagram_item">
+                          <img
+                            className="itit_information_instagram_logo"
+                            src="/Instagram_logo.svg"
+                            alt="Instagram画像"
+                          />
+                          <p className="itit_information_instagram_name">
+                            itfeelsit
+                          </p>
+                          <p className="itit_information_instagram_date">
+                            2024/01/01
+                          </p>
+                        </div>
+                        <img
+                          className="itit_information_instagram_image"
+                          src="/staff.png"
+                          alt="スタッフ画像"
+                        />
+                        <p className="itit_information_instagram_text">
+                          今年も皆様のおかげで無事に1年終えることができました🥲
+                          ....
+                        </p>
+                        <a className="itit_information_instagram_more" href="#">
+                          もっと読む→
+                        </a>
+                      </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <div className="itit_information_instagram">
+                        <div className="itit_information_instagram_item">
+                          <img
+                            className="itit_information_instagram_logo"
+                            src="/Instagram_logo.svg"
+                            alt="Instagram画像"
+                          />
+                          <p className="itit_information_instagram_name">
+                            itfeelsit
+                          </p>
+                          <p className="itit_information_instagram_date">
+                            2024/01/01
+                          </p>
+                        </div>
+                        <img
+                          className="itit_information_instagram_image"
+                          src="/staff.png"
+                          alt="スタッフ画像"
+                        />
+                        <p className="itit_information_instagram_text">
+                          今年も皆様のおかげで無事に1年終えることができました🥲
+                          ....
+                        </p>
+                        <a className="itit_information_instagram_more" href="#">
+                          もっと読む→
+                        </a>
+                      </div>
+                    </SwiperSlide>
+                  </Swiper>
+                </div>
               </div>
-              <div className="itit_information_instagram_group">
-                <div className="itit_information_instagram">
-                  <div className="itit_information_instagram_item">
-                    <img
-                      className="itit_information_instagram_logo"
-                      src="/Instagram_logo.svg"
-                      alt="Instagram画像"
-                    />
-                    <p className="itit_information_instagram_name">itfeelsit</p>
-                    <p className="itit_information_instagram_date">
-                      2024/01/01
-                    </p>
-                  </div>
-                  <img
-                    className="itit_information_instagram_image"
-                    src="/staff.png"
-                    alt="スタッフ画像"
-                  />
-                  <p className="itit_information_instagram_text">
-                    今年も皆様のおかげで無事に1年終えることができました🥲 ....
-                  </p>
-                  <p className="itit_information_instagram_more">もっと読む→</p>
-                </div>
-                <div className="itit_information_instagram">
-                  <div className="itit_information_instagram_item">
-                    <img
-                      className="itit_information_instagram_logo"
-                      src="/Instagram_logo.svg"
-                      alt="Instagram画像"
-                    />
-                    <p className="itit_information_instagram_name">itfeelsit</p>
-                    <p className="itit_information_instagram_date">
-                      2024/01/01
-                    </p>
-                  </div>
-                  <img
-                    className="itit_information_instagram_image"
-                    src="/staff.png"
-                    alt="スタッフ画像"
-                  />
-                  <p className="itit_information_instagram_text">
-                    今年も皆様のおかげで無事に1年終えることができました🥲 ....
-                  </p>
-                  <p className="itit_information_instagram_more">もっと読む→</p>
-                  <div className="itit_information_arrow-group">
-                    <img src="/chevron_left.svg" alt="左矢印" />
-                    <img src="/chevron_right.svg" alt="右矢印" />
-                  </div>
-                </div>
-                <div className="itit_information_instagram">
-                  <div className="itit_information_instagram_item">
-                    <img
-                      className="itit_information_instagram_logo"
-                      src="/Instagram_logo.svg"
-                      alt="Instagram画像"
-                    />
-                    <p className="itit_information_instagram_name">itfeelsit</p>
-                    <p className="itit_information_instagram_date">
-                      2024/01/01
-                    </p>
-                  </div>
-                  <img
-                    className="itit_information_instagram_image"
-                    src="/staff.png"
-                    alt="スタッフ画像"
-                  />
-                  <p className="itit_information_instagram_text">
-                    今年も皆様のおかげで無事に1年終えることができました🥲 ....
-                  </p>
-                  <p className="itit_information_instagram_more">もっと読む→</p>
-                </div>
-              </div>
+            </div>
+            <div className="itit_information_arrow-group">
+              <button
+                id="information-button-prev"
+                className=" itit_information_arrow-group_button"
+                tabIndex={0}
+                role="button"
+              >
+                <img src="/chevron_left.svg" alt="左矢印" />
+              </button>
+              <button
+                id="information-button-next"
+                className="itit_information_arrow-group_button"
+                tabIndex={0}
+                role="button"
+              >
+                <img src="/chevron_right.svg" alt="右矢印" />
+              </button>
             </div>
           </section>
 
