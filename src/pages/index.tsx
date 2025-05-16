@@ -38,8 +38,8 @@ export default function Home() {
             <div className="itit_top_group">
               <div className="itit_top_text">
                 <p className="itit_top_text_p">ご予約はお電話でお受けします</p>
-                <a className="itit_top_text_phone" href="#">
-                  0178-96-2581
+                <a className="itit_top_text_phone" href="tel:0178-25-8425">
+                  0178-25-8425
                 </a>
               </div>
               <div className="itit_top_phone-link-group">
@@ -70,26 +70,24 @@ export default function Home() {
                   <p className="itit_menu_price-table_title">ヘア</p>
                   <ul className="itit_menu_price-table_list">
                     <li className="itit_menu_price-table_list_item">
-                      <span className="itit_menu_price-table_list_item_name">
-                        カット
-                      </span>
-                      <span className="itit_menu_price-table_list_item_price">
+                      <span className="itit_menu_price-table_name">カット</span>
+                      <span className="itit_menu_price-table_number">
                         ¥4,000
                       </span>
                     </li>
                     <li className="itit_menu_price-table_list_item">
-                      <span className="itit_menu_price-table_list_item_name">
+                      <span className="itit_menu_price-table_name">
                         カット・カラー
                       </span>
-                      <span className="itit_menu_price-table_list_item_price">
+                      <span className="itit_menu_price-table_number">
                         ¥8,000〜
                       </span>
                     </li>
                     <li className="itit_menu_price-table_list_item">
-                      <span className="itit_menu_price-table_list_item_name">
+                      <span className="itit_menu_price-table_name">
                         カット・パーマ
                       </span>
-                      <span className="itit_menu_price-table_list_item_price">
+                      <span className="itit_menu_price-table_number">
                         ¥8,000〜
                       </span>
                     </li>
@@ -100,18 +98,18 @@ export default function Home() {
                   <p className="itit_menu_price-table_title">ストレート</p>
                   <ul className="itit_menu_price-table_list">
                     <li className="itit_menu_price-table_list_item">
-                      <span className="itit_menu_price-table_list_item_name">
+                      <span className="itit_menu_price-table_name">
                         縮毛矯正
                       </span>
-                      <span className="itit_menu_price-table_list_item_price">
+                      <span className="itit_menu_price-table_number">
                         ¥4,000
                       </span>
                     </li>
                     <li className="itit_menu_price-table_list_item">
-                      <span className="itit_menu_price-table_list_item_name">
+                      <span className="itit_menu_price-table_name">
                         酸性ストレートパーマ
                       </span>
-                      <span className="itit_menu_price-table_list_item_price">
+                      <span className="itit_menu_price-table_number">
                         ¥8,000〜
                       </span>
                     </li>
@@ -124,26 +122,26 @@ export default function Home() {
                   <p className="itit_menu_price-table_title">ハイライト</p>
                   <ul className="itit_menu_price-table_list">
                     <li className="itit_menu_price-table_list_item">
-                      <span className="itit_menu_price-table_list_item_name">
+                      <span className="itit_menu_price-table_name">
                         ハイライトS
                       </span>
-                      <span className="itit_menu_price-table_list_item_price">
+                      <span className="itit_menu_price-table_number">
                         ¥4,000
                       </span>
                     </li>
                     <li className="itit_menu_price-table_list_item">
-                      <span className="itit_menu_price-table_list_item_name">
+                      <span className="itit_menu_price-table_name">
                         ハイライトM
                       </span>
-                      <span className="itit_menu_price-table_list_item_price">
+                      <span className="itit_menu_price-table_number">
                         ¥8,000〜
                       </span>
                     </li>
                     <li className="itit_menu_price-table_list_item">
-                      <span className="itit_menu_price-table_list_item_name">
+                      <span className="itit_menu_price-table_name">
                         ハイライトL
                       </span>
-                      <span className="itit_menu_price-table_list_item_price">
+                      <span className="itit_menu_price-table_number">
                         ¥8,000〜
                       </span>
                     </li>
@@ -154,10 +152,10 @@ export default function Home() {
                   <p className="itit_menu_price-table_title">トリートメント</p>
                   <ul className="itit_menu_price-table_list">
                     <li className="itit_menu_price-table_list_item">
-                      <span className="itit_menu_price-table_list_item_name">
+                      <span className="itit_menu_price-table_name">
                         トリートメント
                       </span>
-                      <span className="itit_menu_price-table_list_item_price">
+                      <span className="itit_menu_price-table_number">
                         ¥4,000
                       </span>
                     </li>
@@ -170,34 +168,30 @@ export default function Home() {
                   <p className="itit_menu_price-table_title">出張</p>
                   <ul className="itit_menu_price-table_list">
                     <li className="itit_menu_price-table_list_item">
-                      <span className="itit_menu_price-table_list_item_name">
-                        カット
-                      </span>
-                      <span className="itit_menu_price-table_list_item_price">
+                      <span className="itit_menu_price-table_name">カット</span>
+                      <span className="itit_menu_price-table_number">
                         ¥2,000
                       </span>
                     </li>
                     <li className="itit_menu_price-table_list_item">
-                      <span className="itit_menu_price-table_list_item_name">
+                      <span className="itit_menu_price-table_name">
                         カット＋顔剃り
                       </span>
-                      <span className="itit_menu_price-table_list_item_price">
+                      <span className="itit_menu_price-table_number">
                         ¥2,500
                       </span>
                     </li>
                     <li className="itit_menu_price-table_list_item">
-                      <span className="itit_menu_price-table_list_item_name">
-                        顔剃り
-                      </span>
-                      <span className="itit_menu_price-table_list_item_price">
+                      <span className="itit_menu_price-table_name">顔剃り</span>
+                      <span className="itit_menu_price-table_number">
                         ¥1,000
                       </span>
                     </li>
                     <li className="itit_menu_price-table_list_item">
-                      <span className="itit_menu_price-table_list_item_name">
+                      <span className="itit_menu_price-table_name">
                         カット＋顔剃り＋カラー
                       </span>
-                      <span className="itit_menu_price-table_list_item_price">
+                      <span className="itit_menu_price-table_number">
                         ¥5,000
                       </span>
                     </li>
@@ -208,10 +202,10 @@ export default function Home() {
                   <p className="itit_menu_price-table_title">自宅出張</p>
                   <ul className="itit_menu_price-table_list">
                     <li className="itit_menu_price-table_list_item">
-                      <span className="itit_menu_price-table_list_item_name">
+                      <span className="itit_menu_price-table_name">
                         自宅出張
                       </span>
-                      <span className="itit_menu_price-table_list_item_price">
+                      <span className="itit_menu_price-table_number">
                         ¥5,000
                       </span>
                     </li>
@@ -271,12 +265,15 @@ export default function Home() {
                   <br /> ご予約は電話にて承っています <br />
                   AM 09:00〜PM 18:00(月曜定休)
                 </p>
-                <a className="itit_reservation_tel" href="#">
-                  tel: 0178-96-2581
+                <a className="itit_reservation_tel" href="tel:0178-25-8425">
+                  tel: 0178-25-8425
                 </a>
                 <div className="itit_reservation_tel-link-group">
-                  <a className="itit_reservation_tel-link" href="#">
-                    0178-96-2581
+                  <a
+                    className="itit_reservation_tel-link"
+                    href="tel:0178-25-8425"
+                  >
+                    0178-25-8425
                   </a>
                 </div>
               </div>
@@ -396,7 +393,11 @@ export default function Home() {
                           今年も皆様のおかげで無事に1年終えることができました🥲
                           ....
                         </p>
-                        <a className="itit_information_instagram_more" href="#">
+                        <a
+                          className="itit_information_instagram_more"
+                          href="https://www.instagram.com/itfeelsit/"
+                          target="_blank"
+                        >
                           もっと読む→
                         </a>
                       </div>
@@ -425,7 +426,11 @@ export default function Home() {
                           今年も皆様のおかげで無事に1年終えることができました🥲
                           ....
                         </p>
-                        <a className="itit_information_instagram_more" href="#">
+                        <a
+                          className="itit_information_instagram_more"
+                          href="https://www.instagram.com/itfeelsit/"
+                          target="_blank"
+                        >
                           もっと読む→
                         </a>
                       </div>
@@ -454,7 +459,11 @@ export default function Home() {
                           今年も皆様のおかげで無事に1年終えることができました🥲
                           ....
                         </p>
-                        <a className="itit_information_instagram_more" href="#">
+                        <a
+                          className="itit_information_instagram_more"
+                          href="https://www.instagram.com/itfeelsit/"
+                          target="_blank"
+                        >
                           もっと読む→
                         </a>
                       </div>

@@ -21,9 +21,6 @@ const Header = () => {
             <li className="itit_header_p">
               <a href="#access">アクセス</a>
             </li>
-            <li className="itit_header_p">
-              <a href="#visit-beauty">訪問理美容</a>
-            </li>
           </ul>
         </div>
         <div className="itit_header_pages-group">
