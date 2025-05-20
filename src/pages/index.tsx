@@ -43,7 +43,9 @@ export default function Home() {
                 </a>
               </div>
               <div className="itit_top_phone-link-group">
-                <p className="itit_top_phone-link">電話する</p>
+                <a className="itit_top_phone-link" href="tel:0178-25-8425">
+                  電話する
+                </a>
               </div>
               <div className="itit_top_image-gruop">
                 <img
@@ -71,7 +73,7 @@ export default function Home() {
                   <ul className="itit_menu_price-table_list">
                     <li className="itit_menu_price-table_list_item">
                       <span className="itit_menu_price-table_name">カット</span>
-                      <span className="itit_menu_price-table_number">
+                      <span className="itit_menu_price-table_number non_tilde">
                         ¥4,000
                       </span>
                     </li>
@@ -101,7 +103,7 @@ export default function Home() {
                       <span className="itit_menu_price-table_name">
                         縮毛矯正
                       </span>
-                      <span className="itit_menu_price-table_number">
+                      <span className="itit_menu_price-table_number non_tilde">
                         ¥4,000
                       </span>
                     </li>
@@ -125,7 +127,7 @@ export default function Home() {
                       <span className="itit_menu_price-table_name">
                         ハイライトS
                       </span>
-                      <span className="itit_menu_price-table_number">
+                      <span className="itit_menu_price-table_number non_tilde">
                         ¥4,000
                       </span>
                     </li>
@@ -155,7 +157,7 @@ export default function Home() {
                       <span className="itit_menu_price-table_name">
                         トリートメント
                       </span>
-                      <span className="itit_menu_price-table_number">
+                      <span className="itit_menu_price-table_number non_tilde">
                         ¥4,000
                       </span>
                     </li>
@@ -558,12 +560,14 @@ export default function Home() {
                 </div>
                 <div className="itit_visit-beauty_text-group">
                   <h2 className="itit_visit-beauty_title">訪問理美容</h2>
-                  <p className="itit_visit-beauty_text">
-                    介護・医療施設への訪問美容も実施しています。
-                  </p>
-                  <p className="itit_visit-beauty_text">
-                    お気軽にお問い合わせください。
-                  </p>
+                  <div className="itit_visit-beauty_text-list">
+                    <p className="itit_visit-beauty_text">
+                      介護・医療施設への訪問美容も実施しています。
+                    </p>
+                    <p className="itit_visit-beauty_text">
+                      お気軽にお問い合わせください。
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
