@@ -62,7 +62,7 @@ export default function Home() {
             </div>
           </div>
 
-          <section id="menu">
+          <section>
             <div className="itit_menu2">
               <div className="itit_menu2_group">
                 <h1 className="itit_menu2_title">脱毛メニュー</h1>
@@ -72,51 +72,53 @@ export default function Home() {
                 <button className="itit_menu2_button-woman">女性</button>
                 <button className="itit_menu2_button-man">男性</button>
               </div>
-            </div>
 
-            <div className="itit_menu2_card">
-              <div className="itit_menu2_card-grid">
-                <img
-                  src="/datumou-bui.svg"
-                  alt="おでこ"
-                  className="itit_menu2_card-image"
-                />
-                <div className="itit_menu2_card-info">
-                  <span className="itit_menu2_card-info_label">おでこ</span>
-                  <span className="itit_menu2_card-info_price">¥2,500</span>
-                </div>
-              </div>
-              <div className="itit_menu2_card-grid">
-                <img
-                  src="/datumou-bui.svg"
-                  alt="おでこ"
-                  className="itit_menu2_card-image"
-                />
-                <div className="itit_menu2_card-info">
-                  <span className="itit_menu2_card-info_label">おでこ</span>
-                  <span className="itit_menu2_card-info_price">¥2,500</span>
-                </div>
-              </div>
-              <div className="itit_menu2_card-grid">
-                <img
-                  src="/datumou-bui.svg"
-                  alt="おでこ"
-                  className="itit_menu2_card-image"
-                />
-                <div className="itit_menu2_card-info">
-                  <span className="itit_menu2_card-info_label">おでこ</span>
-                  <span className="itit_menu2_card-info_price">¥2,500</span>
-                </div>
-              </div>
-              <div className="itit_menu2_card-grid">
-                <img
-                  src="/datumou-bui.svg"
-                  alt="おでこ"
-                  className="itit_menu2_card-image"
-                />
-                <div className="itit_menu2_card-info">
-                  <span className="itit_menu2_card-info_label">おでこ</span>
-                  <span className="itit_menu2_card-info_price">¥2,500</span>
+              <div className="itit_menu2_card">
+                <div className="itit_menu2_card-group">
+                  <div className="itit_menu2_card-grid">
+                    <img
+                      src="/datumou-bui.svg"
+                      alt="おでこ"
+                      className="itit_menu2_card-image"
+                    />
+                    <div className="itit_menu2_card-info">
+                      <span className="itit_menu2_card-info_label">おでこ</span>
+                      <span className="itit_menu2_card-info_price">¥2,500</span>
+                    </div>
+                  </div>
+                  <div className="itit_menu2_card-grid">
+                    <img
+                      src="/datumou-bui.svg"
+                      alt="おでこ"
+                      className="itit_menu2_card-image"
+                    />
+                    <div className="itit_menu2_card-info">
+                      <span className="itit_menu2_card-info_label">おでこ</span>
+                      <span className="itit_menu2_card-info_price">¥2,500</span>
+                    </div>
+                  </div>
+                  <div className="itit_menu2_card-grid">
+                    <img
+                      src="/datumou-bui.svg"
+                      alt="おでこ"
+                      className="itit_menu2_card-image"
+                    />
+                    <div className="itit_menu2_card-info">
+                      <span className="itit_menu2_card-info_label">おでこ</span>
+                      <span className="itit_menu2_card-info_price">¥2,500</span>
+                    </div>
+                  </div>
+                  <div className="itit_menu2_card-grid">
+                    <img
+                      src="/datumou-bui.svg"
+                      alt="おでこ"
+                      className="itit_menu2_card-image"
+                    />
+                    <div className="itit_menu2_card-info">
+                      <span className="itit_menu2_card-info_label">おでこ</span>
+                      <span className="itit_menu2_card-info_price">¥2,500</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
