@@ -119,71 +119,78 @@ export default function Home() {
                       <span className="itit_menu2_card-info_price">¥2,500</span>
                     </div>
                   </div>
+                  <div className="itit_menu2_card-grid">
+                    <img
+                      src="/datumou-bui.svg"
+                      alt="おでこ"
+                      className="itit_menu2_card-image"
+                    />
+                    <div className="itit_menu2_card-info">
+                      <span className="itit_menu2_card-info_label">おでこ</span>
+                      <span className="itit_menu2_card-info_price">¥2,500</span>
+                    </div>
+                  </div>
+                  <div className="itit_menu2_card-grid">
+                    <img
+                      src="/datumou-bui.svg"
+                      alt="おでこ"
+                      className="itit_menu2_card-image"
+                    />
+                    <div className="itit_menu2_card-info">
+                      <span className="itit_menu2_card-info_label">おでこ</span>
+                      <span className="itit_menu2_card-info_price">¥2,500</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </section>
-
-          <section className="itit_payment_method">
-            <div className="itit_payment_method_group">
-              <h1 className="itit_payment_method_title">お支払い方法</h1>
-            </div>
-            <div className="itit_payment_method_list">
-              <div className="itit_payment_method_item">
-                <img
-                  className="itit_payment_method_image"
-                  src="/Cash.svg"
-                  alt="現金"
-                />
-                <div className="itit_payment_method_item_group">
-                  <span className="itit_payment_method_badge">1</span>
-                  <p className="itit_payment_method_text">現金</p>
-                </div>
-              </div>
-              <div className="itit_payment_method_item">
-                <img
-                  className="itit_payment_method_image"
-                  src="/CreditCard.svg"
-                  alt="クレジットカード"
-                />
-                <div className="itit_payment_method_item_group">
-                  <span className="itit_payment_method_badge">2</span>
-                  <p className="itit_payment_method_text">クレジットカード</p>
-                </div>
-              </div>
-              <div className="itit_payment_method_item">
-                <img
-                  className="itit_payment_method_image"
-                  src="/IC-QR.svg"
-                  alt="QR・電子マネー"
-                />
-                <div className="itit_payment_method_item_group">
-                  <span className="itit_payment_method_badge">3</span>
-                  <p className="itit_payment_method_text">QR, 電子マネー</p>
-                </div>
+                <p className="itit_menu2_card_p">※ 学生は10％割引</p>
               </div>
             </div>
           </section>
 
           <section>
-            <div className="itit_reservation">
-              <div className="itit_reservation_group">
-                <h1 className="itit_reservation_title">ご予約</h1>
-                <p className="itit_reservation_text">
-                  当店は完全予約制です
-                  <br /> ご予約は電話にて承っています <br />
-                  AM 09:00〜PM 18:00(月曜定休)
+            <div className="itit_light">
+              <div className="itit_light_group">
+                <h2 className="itit_light_title">光フェイシャルメニュー</h2>
+                <p className="itit_light_text">
+                  光フェイシャルとは
+                  <br />
+                  顔の肌内部に特殊な光を当てることで
+                  <br />
+                  美白効果や、シミ、しわ、たるみ
+                  <br />
+                  肌トラブルの改善などが期待できます。
                 </p>
-                <a className="itit_reservation_tel" href="tel:0178-25-8425">
-                  tel: 0178-25-8425
-                </a>
-                <div className="itit_reservation_tel-link-group">
-                  <a
-                    className="itit_reservation_tel-link"
-                    href="tel:0178-25-8425"
-                  >
-                    0178-25-8425
-                  </a>
+              </div>
+              <div className="itit_light_menu">
+                <div className="itit_light_menu-group">
+                  <h3 className="itit_light_menu-title">
+                    ベーシックコース
+                    <p className="itit_light_menu-price">¥5,500</p>
+                    <div className="itit_light_menu-matome">
+                      <p className="itit_light_menu-line">クレンジング</p>
+                      <p className="itit_light_menu-line">∨</p>
+                      <p className="itit_light_menu-line">光フェイシャル</p>
+                      <p className="itit_light_menu-line">∨</p>
+                      <p className="itit_light_menu-line">パック</p>
+                      <p className="itit_light_menu-line">∨</p>
+                      <p className="itit_light_menu-line">仕上げ</p>
+                    </div>
+                  </h3>
+                  <h3 className="itit_light_menu-title2">
+                    スペシャルフェイシャルコース
+                    <p className="itit_light_menu-price">¥7,150</p>
+                    <div className="itit_light_menu-matome">
+                      <p className="itit_light_menu-line">クレンジング</p>
+                      <p className="itit_light_menu-line">∨</p>
+                      <p className="itit_light_menu-line">光フェイシャル</p>
+                      <p className="itit_light_menu-line">∨</p>
+                      <p className="itit_light_menu-line">
+                        トリートメントパック
+                      </p>
+                      <p className="itit_light_menu-line">∨</p>
+                      <p className="itit_light_menu-line">仕上げ</p>
+                    </div>
+                  </h3>
                 </div>
               </div>
             </div>
@@ -192,69 +199,11 @@ export default function Home() {
           <section id="staff" className="itit_staff">
             <h2 className="itit_staff_title">スタッフ</h2>
             <div className="itit_staff_list">
-              <Swiper
-                navigation={{
-                  nextEl: "#staff-button-next",
-                  prevEl: "#staff-button-prev",
-                }}
-                modules={[Navigation]}
-                className="mySwiper"
-                breakpoints={{
-                  768: {
-                    slidesPerView: 3,
-                    spaceBetween: 10,
-                  },
-                }}
-              >
-                <SwiperSlide>
-                  <div className="itit_staff_item">
-                    <div className="itit_staff_image"></div>
-                    <p className="itit_staff_role">ヘアスタイリスト</p>
-                    <h3 className="itit_staff_name">ヤマミチ アツシ</h3>
-                    <p className="itit_staff_message">
-                      いつも楽しくをモットーに！
-                    </p>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="itit_staff_item">
-                    <div className="itit_staff_image"></div>
-                    <p className="itit_staff_role">ヘアスタイリスト</p>
-                    <h3 className="itit_staff_name">ヤマミチ アツシ</h3>
-                    <p className="itit_staff_message">
-                      いつも楽しくをモットーに！
-                    </p>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="itit_staff_item">
-                    <div className="itit_staff_image"></div>
-                    <p className="itit_staff_role">ヘアスタイリスト</p>
-                    <h3 className="itit_staff_name">ヤマミチ アツシ</h3>
-                    <p className="itit_staff_message">
-                      いつも楽しくをモットーに！
-                    </p>
-                  </div>
-                </SwiperSlide>
-              </Swiper>
-            </div>
-            <div className="itit_staff_arrow-group">
-              <button
-                id="staff-button-prev"
-                className=" itit_staff_arrow-group_button"
-                tabIndex={0}
-                role="button"
-              >
-                <img src="/chevron_left.svg" alt="左矢印" />
-              </button>
-              <button
-                id="staff-button-next"
-                className="itit_staff_arrow-group_button"
-                tabIndex={0}
-                role="button"
-              >
-                <img src="/chevron_right.svg" alt="右矢印" />
-              </button>
+              <div className="itit_staff_item">
+                <div className="itit_staff_image"></div>
+                <p className="itit_staff_role">エステティシャン</p>
+                <h3 className="itit_staff_name">タカハシ イク</h3>
+              </div>
             </div>
           </section>
 

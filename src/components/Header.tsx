@@ -26,7 +26,7 @@ const Header = () => {
           </div>
           <div className="itit_header_pages-group">
             <a className="itit_header_pages" href="/removal" target="_blank">
-              脱毛ページ
+              脱毛ページ ＞
             </a>
           </div>
         </div>
