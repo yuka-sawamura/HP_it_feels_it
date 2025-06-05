@@ -1,8 +1,18 @@
 import React, { useState } from "react";
 
-const Header = () => {
+interface HeaderProps {
+  pageName: string;
+  pageLink: string;
+}
+
+const Header: React.FC<HeaderProps> = ({ pageName, pageLink }) => {
   const [isOpen, setIsOpen] = useState(false);
   const hundleMenuOpen = () => setIsOpen(false);
+
+  const pageLinkStyle = {
+    backgroundColor: pageName === "美容室ページ" ? "#73C986" : "#E2734B",
+  };
+
   return (
     <section id="/beauty-salon">
       <header className="itit_header">
@@ -24,9 +34,9 @@ const Header = () => {
               </li>
             </ul>
           </div>
-          <div className="itit_header_pages-group">
-            <a className="itit_header_pages" href="/removal" target="_blank">
-              脱毛ページ ＞
+          <div className="itit_header_pages-group" style={pageLinkStyle}>
+            <a className="itit_header_pages" href={pageLink}>
+              {pageName} ＞
             </a>
           </div>
         </div>
@@ -34,4 +44,5 @@ const Header = () => {
     </section>
   );
 };
+
 export default Header;

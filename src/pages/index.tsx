@@ -32,7 +32,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Header />
+        <Header pageName="脱毛ページ" pageLink="/removal" />
         <main>
           <div className="itit_top">
             <div className="itit_top_group">

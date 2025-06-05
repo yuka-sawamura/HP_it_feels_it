@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Swiper, SwiperSlide } from "swiper/react";
+import React, { useState } from "react";
 
 // Import Swiper styles
 import "swiper/css";
@@ -23,6 +24,8 @@ const geistMono = Geist_Mono({
 });
 
 export default function Home() {
+  const [selectedMenu, setSelectedMenu] = useState("woman");
+
   return (
     <>
       <Head>
@@ -32,7 +35,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Header />
+        <Header pageName="美容室ページ" pageLink="/" />
         <main>
           <div className="itit_top">
             <div className="itit_top_group">
@@ -69,79 +72,143 @@ export default function Home() {
                 <p className="itit_menu2_text">(税込)</p>
               </div>
               <div className="itit_menu2_button">
-                <button className="itit_menu2_button-woman">女性</button>
-                <button className="itit_menu2_button-man">男性</button>
+                <button
+                  className="itit_menu2_button-woman"
+                  style={{
+                    backgroundColor:
+                      selectedMenu === "woman" ? "#565656" : "white",
+                    color: selectedMenu === "woman" ? "white" : "#565656",
+                  }}
+                  onClick={() => setSelectedMenu("woman")}
+                >
+                  女性
+                </button>
+                <button
+                  className="itit_menu2_button-man"
+                  style={{
+                    backgroundColor:
+                      selectedMenu === "man" ? "#565656" : "white",
+                    color: selectedMenu === "man" ? "white" : "#565656",
+                  }}
+                  onClick={() => setSelectedMenu("man")}
+                >
+                  男性
+                </button>
               </div>
 
               <div className="itit_menu2_card">
-                <div className="itit_menu2_card-group">
-                  <div className="itit_menu2_card-grid">
-                    <img
-                      src="/datumou-bui.svg"
-                      alt="おでこ"
-                      className="itit_menu2_card-image"
-                    />
-                    <div className="itit_menu2_card-info">
-                      <span className="itit_menu2_card-info_label">おでこ</span>
-                      <span className="itit_menu2_card-info_price">¥2,500</span>
+                {selectedMenu === "woman" ? (
+                  <div className="itit_menu2_card-group">
+                    <div className="itit_menu2_card-grid">
+                      <img
+                        src="/datumou-bui.svg"
+                        alt="おでこ"
+                        className="itit_menu2_card-image"
+                      />
+                      <div className="itit_menu2_card-info">
+                        <span className="itit_menu2_card-info_label">
+                          おでこ
+                        </span>
+                        <span className="itit_menu2_card-info_price">
+                          ¥2,500
+                        </span>
+                      </div>
+                    </div>
+                    <div className="itit_menu2_card-grid">
+                      <img
+                        src="/datumou-bui.svg"
+                        alt="おでこ"
+                        className="itit_menu2_card-image"
+                      />
+                      <div className="itit_menu2_card-info">
+                        <span className="itit_menu2_card-info_label">
+                          おでこ
+                        </span>
+                        <span className="itit_menu2_card-info_price">
+                          ¥2,500
+                        </span>
+                      </div>
+                    </div>
+                    <div className="itit_menu2_card-grid">
+                      <img
+                        src="/datumou-bui.svg"
+                        alt="おでこ"
+                        className="itit_menu2_card-image"
+                      />
+                      <div className="itit_menu2_card-info">
+                        <span className="itit_menu2_card-info_label">
+                          おでこ
+                        </span>
+                        <span className="itit_menu2_card-info_price">
+                          ¥2,500
+                        </span>
+                      </div>
+                    </div>
+                    <div className="itit_menu2_card-grid">
+                      <img
+                        src="/datumou-bui.svg"
+                        alt="おでこ"
+                        className="itit_menu2_card-image"
+                      />
+                      <div className="itit_menu2_card-info">
+                        <span className="itit_menu2_card-info_label">
+                          おでこ
+                        </span>
+                        <span className="itit_menu2_card-info_price">
+                          ¥2,500
+                        </span>
+                      </div>
+                    </div>
+                    <div className="itit_menu2_card-grid">
+                      <img
+                        src="/datumou-bui.svg"
+                        alt="おでこ"
+                        className="itit_menu2_card-image"
+                      />
+                      <div className="itit_menu2_card-info">
+                        <span className="itit_menu2_card-info_label">
+                          おでこ
+                        </span>
+                        <span className="itit_menu2_card-info_price">
+                          ¥2,500
+                        </span>
+                      </div>
+                    </div>
+                    <div className="itit_menu2_card-grid">
+                      <img
+                        src="/datumou-bui.svg"
+                        alt="おでこ"
+                        className="itit_menu2_card-image"
+                      />
+                      <div className="itit_menu2_card-info">
+                        <span className="itit_menu2_card-info_label">
+                          おでこ
+                        </span>
+                        <span className="itit_menu2_card-info_price">
+                          ¥2,500
+                        </span>
+                      </div>
                     </div>
                   </div>
-                  <div className="itit_menu2_card-grid">
-                    <img
-                      src="/datumou-bui.svg"
-                      alt="おでこ"
-                      className="itit_menu2_card-image"
-                    />
-                    <div className="itit_menu2_card-info">
-                      <span className="itit_menu2_card-info_label">おでこ</span>
-                      <span className="itit_menu2_card-info_price">¥2,500</span>
+                ) : (
+                  <div className="itit_menu2_card-group">
+                    <div className="itit_menu2_card-grid">
+                      <img
+                        src="/datumou-bui.svg"
+                        alt="おでこ"
+                        className="itit_menu2_card-image"
+                      />
+                      <div className="itit_menu2_card-info">
+                        <span className="itit_menu2_card-info_label">
+                          おでこ
+                        </span>
+                        <span className="itit_menu2_card-info_price">
+                          ¥3,000
+                        </span>
+                      </div>
                     </div>
                   </div>
-                  <div className="itit_menu2_card-grid">
-                    <img
-                      src="/datumou-bui.svg"
-                      alt="おでこ"
-                      className="itit_menu2_card-image"
-                    />
-                    <div className="itit_menu2_card-info">
-                      <span className="itit_menu2_card-info_label">おでこ</span>
-                      <span className="itit_menu2_card-info_price">¥2,500</span>
-                    </div>
-                  </div>
-                  <div className="itit_menu2_card-grid">
-                    <img
-                      src="/datumou-bui.svg"
-                      alt="おでこ"
-                      className="itit_menu2_card-image"
-                    />
-                    <div className="itit_menu2_card-info">
-                      <span className="itit_menu2_card-info_label">おでこ</span>
-                      <span className="itit_menu2_card-info_price">¥2,500</span>
-                    </div>
-                  </div>
-                  <div className="itit_menu2_card-grid">
-                    <img
-                      src="/datumou-bui.svg"
-                      alt="おでこ"
-                      className="itit_menu2_card-image"
-                    />
-                    <div className="itit_menu2_card-info">
-                      <span className="itit_menu2_card-info_label">おでこ</span>
-                      <span className="itit_menu2_card-info_price">¥2,500</span>
-                    </div>
-                  </div>
-                  <div className="itit_menu2_card-grid">
-                    <img
-                      src="/datumou-bui.svg"
-                      alt="おでこ"
-                      className="itit_menu2_card-image"
-                    />
-                    <div className="itit_menu2_card-info">
-                      <span className="itit_menu2_card-info_label">おでこ</span>
-                      <span className="itit_menu2_card-info_price">¥2,500</span>
-                    </div>
-                  </div>
-                </div>
+                )}
                 <p className="itit_menu2_card_p">※ 学生は10％割引</p>
               </div>
             </div>
