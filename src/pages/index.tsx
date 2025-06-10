@@ -4,7 +4,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import { client } from "@/libs/client";
+import { Staff } from "@/libs/types";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -12,7 +13,7 @@ import "swiper/css/navigation";
 // import required modules
 import { Navigation } from "swiper/modules";
 
-export default function Home() {
+export default function Home({ staff }: { staff: Staff[] }) {
   return (
     <>
       <Head>
@@ -294,41 +295,24 @@ export default function Home() {
                 className="mySwiper"
                 breakpoints={{
                   768: {
-                    slidesPerView: 3,
+                    slidesPerView: staff.length,
+
                     spaceBetween: 10,
                   },
                 }}
               >
-                <SwiperSlide>
-                  <div className="itit_staff_item">
-                    <div className="itit_staff_image"></div>
-                    <p className="itit_staff_role">ヘアスタイリスト</p>
-                    <h3 className="itit_staff_name">ヤマミチ アツシ</h3>
-                    <p className="itit_staff_message">
-                      いつも楽しくをモットーに！
-                    </p>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="itit_staff_item">
-                    <div className="itit_staff_image"></div>
-                    <p className="itit_staff_role">ヘアスタイリスト</p>
-                    <h3 className="itit_staff_name">ヤマミチ アツシ</h3>
-                    <p className="itit_staff_message">
-                      いつも楽しくをモットーに！
-                    </p>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="itit_staff_item">
-                    <div className="itit_staff_image"></div>
-                    <p className="itit_staff_role">ヘアスタイリスト</p>
-                    <h3 className="itit_staff_name">ヤマミチ アツシ</h3>
-                    <p className="itit_staff_message">
-                      いつも楽しくをモットーに！
-                    </p>
-                  </div>
-                </SwiperSlide>
+                {staff.map((item, index) => (
+                  <SwiperSlide key={index}>
+                    <div className="itit_staff_item">
+                      <div className="itit_staff_image">
+                        <img src={item.image.url} alt={item.name} />
+                      </div>
+                      <p className="itit_staff_role">{item.position}</p>
+                      <h3 className="itit_staff_name">{item.name}</h3>
+                      <p className="itit_staff_message">{item.intro}</p>
+                    </div>
+                  </SwiperSlide>
+                ))}
               </Swiper>
             </div>
             <div className="itit_staff_arrow-group">
@@ -578,3 +562,13 @@ export default function Home() {
     </>
   );
 }
+
+export const getStaticProps = async () => {
+  const data = await client.get({ endpoint: "staff" });
+
+  return {
+    props: {
+      staff: data.contents,
+    },
+  };
+};

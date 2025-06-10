@@ -291,16 +291,21 @@
   }
 
   &_image {
-    @include pc {
-      width: 180px;
-      height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 24px;
     }
     @include sp {
       width: 330px;
       height: 330px;
     }
-    background-color: #d9d9d9;
-    border-radius: 8px;
     margin-bottom: 12px;
   }
 
@@ -313,6 +318,7 @@
     }
   }
   &_message {
+    white-space: pre-wrap;
     @include sp {
       display: none;
     }
