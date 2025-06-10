@@ -12,6 +12,7 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Navigation } from "swiper/modules";
+import Instagram from "@/components/Instagram";
 
 export default function Home({ staff }: { staff: Staff[] }) {
   return (
@@ -477,6 +478,7 @@ export default function Home({ staff }: { staff: Staff[] }) {
               </button>
             </div>
           </section>
+          <Instagram />
 
           <section id="access">
             <div className="itit_access">
