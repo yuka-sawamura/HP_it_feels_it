@@ -12,16 +12,6 @@ import "swiper/css/navigation";
 // import required modules
 import { Navigation } from "swiper/modules";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono,",
-  subsets: ["latin"],
-});
-
 export default function Home() {
   return (
     <>
@@ -41,7 +31,7 @@ export default function Home() {
         <meta property="og:url" content="" />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <div className={`${geistSans.variable} ${geistMono.variable}`}>
+      <div>
         <Header pageName="脱毛ページ" pageLink="/removal" />
         <main>
           <div className="itit_top">
