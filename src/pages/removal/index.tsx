@@ -28,7 +28,7 @@ export default function Home() {
 
   return (
     <>
-      {/* <Head>
+      <Head>
         <title>ヘアメイク it feels it イットフィールズイット</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
@@ -43,7 +43,7 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="" />
         <link rel="icon" href="/favicon.png" />
-      </Head> */}
+      </Head>
       <div>
         <Header pageName="美容室ページ" pageLink="/" />
         <main>
