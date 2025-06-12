@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import dayjs from "dayjs";
 import "dayjs/locale/ja";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 
 interface InstagramMedia {
   media_url: string;
@@ -39,21 +43,81 @@ export default function Instagram() {
   const posts = allPosts.slice(0, 3);
   return (
     <>
-      {posts.map((post, index) => (
-        <div key={index}>
-          <p>{`${post.caption.slice(0, 50)}...`}</p>
-          <p>{dayjs(post.timestamp).format("YYYY/MM/DD")}</p>
-          <a href={post.permalink} target="_blank" rel="noopener noreferrer">
-            {post.permalink}
-          </a>
-          <img
-            key={index}
-            src={post.media_url ? post.media_url : ""}
-            alt=""
-            width={200}
-          />
+      <section id="information">
+        <div className="itit_information">
+          <div className="itit_information_group">
+            <h2 className="itit_information_title">新着情報</h2>
+            <p className="itit_information_subtitle">(Instagram)</p>
+            <div className="itit_information_instagram_group">
+              <Swiper
+                navigation={{
+                  nextEl: "#information-button-next",
+                  prevEl: "#information-button-prev",
+                }}
+                modules={[Navigation]}
+                className="mySwiper"
+                breakpoints={{
+                  768: {
+                    slidesPerView: 3,
+                    spaceBetween: 10,
+                  },
+                }}
+              >
+                {posts.map((post, index) => (
+                  <SwiperSlide key={index}>
+                    <div className="itit_information_instagram">
+                      <div className="itit_information_instagram_item">
+                        <img
+                          className="itit_information_instagram_logo"
+                          src="/Instagram_logo.svg"
+                          alt="Instagram画像"
+                        />
+                        <p className="itit_information_instagram_name">
+                          itfeelsit
+                        </p>
+                        <p className="itit_information_instagram_date">
+                          {dayjs(post.timestamp).format("YYYY/MM/DD")}
+                        </p>
+                      </div>
+                      <div className="itit_information_instagram_image">
+                        <img src={post.media_url} alt="" />
+                      </div>
+                      <p className="itit_information_instagram_text">
+                        {`${post.caption.slice(0, 50)}...`}
+                      </p>
+                      <a
+                        className="itit_information_instagram_more"
+                        href={post.permalink}
+                        target="_blank"
+                      >
+                        もっと読む→
+                      </a>
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+          </div>
         </div>
-      ))}
+        <div className="itit_information_arrow-group">
+          <button
+            id="information-button-prev"
+            className=" itit_information_arrow-group_button"
+            tabIndex={0}
+            role="button"
+          >
+            <img src="/chevron_left.svg" alt="左矢印" />
+          </button>
+          <button
+            id="information-button-next"
+            className="itit_information_arrow-group_button"
+            tabIndex={0}
+            role="button"
+          >
+            <img src="/chevron_right.svg" alt="右矢印" />
+          </button>
+        </div>
+      </section>
     </>
   );
 }
