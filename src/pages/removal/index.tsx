@@ -37,6 +37,7 @@ export default function Removal({
 }) {
   const [selectedMenu, setSelectedMenu] = useState("woman");
 
+  console.log(selectedMenu);
   console.log(women);
   console.log(men);
 
@@ -123,114 +124,43 @@ export default function Removal({
               <div className="itit_menu2_card">
                 {selectedMenu === "woman" ? (
                   <div className="itit_menu2_card-group">
-                    <div className="itit_menu2_card-grid">
-                      <img
-                        src="/datumou-bui.svg"
-                        alt="おでこ"
-                        className="itit_menu2_card-image"
-                      />
-                      <div className="itit_menu2_card-info">
-                        <span className="itit_menu2_card-info_label">
-                          おでこ
-                        </span>
-                        <span className="itit_menu2_card-info_price">
-                          ¥2,500
-                        </span>
+                    {women.map((item, index) => (
+                      <div key={index} className="itit_menu2_card-grid">
+                        <img
+                          src={item.thumbnail.url}
+                          alt={item.menu}
+                          className="itit_menu2_card-image"
+                        />
+                        <div className="itit_menu2_card-info">
+                          <span className="itit_menu2_card-info_label">
+                            {item.menu}
+                          </span>
+                          <span className="itit_menu2_card-info_price">
+                            ¥{item.price}
+                          </span>
+                        </div>
                       </div>
-                    </div>
-                    <div className="itit_menu2_card-grid">
-                      <img
-                        src="/datumou-bui.svg"
-                        alt="おでこ"
-                        className="itit_menu2_card-image"
-                      />
-                      <div className="itit_menu2_card-info">
-                        <span className="itit_menu2_card-info_label">
-                          おでこ
-                        </span>
-                        <span className="itit_menu2_card-info_price">
-                          ¥2,500
-                        </span>
-                      </div>
-                    </div>
-                    <div className="itit_menu2_card-grid">
-                      <img
-                        src="/datumou-bui.svg"
-                        alt="おでこ"
-                        className="itit_menu2_card-image"
-                      />
-                      <div className="itit_menu2_card-info">
-                        <span className="itit_menu2_card-info_label">
-                          おでこ
-                        </span>
-                        <span className="itit_menu2_card-info_price">
-                          ¥2,500
-                        </span>
-                      </div>
-                    </div>
-                    <div className="itit_menu2_card-grid">
-                      <img
-                        src="/datumou-bui.svg"
-                        alt="おでこ"
-                        className="itit_menu2_card-image"
-                      />
-                      <div className="itit_menu2_card-info">
-                        <span className="itit_menu2_card-info_label">
-                          おでこ
-                        </span>
-                        <span className="itit_menu2_card-info_price">
-                          ¥2,500
-                        </span>
-                      </div>
-                    </div>
-                    <div className="itit_menu2_card-grid">
-                      <img
-                        src="/datumou-bui.svg"
-                        alt="おでこ"
-                        className="itit_menu2_card-image"
-                      />
-                      <div className="itit_menu2_card-info">
-                        <span className="itit_menu2_card-info_label">
-                          おでこ
-                        </span>
-                        <span className="itit_menu2_card-info_price">
-                          ¥2,500
-                        </span>
-                      </div>
-                    </div>
-                    <div className="itit_menu2_card-grid">
-                      <img
-                        src="/datumou-bui.svg"
-                        alt="おでこ"
-                        className="itit_menu2_card-image"
-                      />
-                      <div className="itit_menu2_card-info">
-                        <span className="itit_menu2_card-info_label">
-                          おでこ
-                        </span>
-                        <span className="itit_menu2_card-info_price">
-                          ¥2,500
-                        </span>
-                      </div>
-                    </div>
+                    ))}
                   </div>
                 ) : (
                   <div className="itit_menu2_card-group">
-                    <div className="itit_menu2_card-grid">
-                      <img
-                        src="/datumou-bui.svg"
-                        alt="おでこ"
-                        className="itit_menu2_card-image"
-                      />
-                      <div className="itit_menu2_card-info">
-                        <span className="itit_menu2_card-info_label">
-                          おでこ
-                        </span>
-                        <span className="itit_menu2_card-info_price">
-                          ¥3,000
-                        </span>
+                    {men.map((item, index) => (
+                      <div key={index} className="itit_menu2_card-grid">
+                        <img
+                          src={item.thumbnail.url}
+                          alt={item.menu}
+                          className="itit_menu2_card-image"
+                        />
+                        <div className="itit_menu2_card-info">
+                          <span className="itit_menu2_card-info_label">
+                            {item.menu}
+                          </span>
+                          <span className="itit_menu2_card-info_price">
+                            ¥{item.price}
+                          </span>
+                        </div>
                       </div>
-                    </div>
+                    ))}
                   </div>
                 )}
                 <p className="itit_menu2_card_p">※ 学生は10％割引</p>

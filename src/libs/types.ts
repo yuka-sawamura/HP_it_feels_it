@@ -18,7 +18,10 @@ export type Staff = {
   removal: boolean;
 };
 
+export type Gender = "women" | "men";
+
 export type MenuItem = {
+  image: any;
   id: string;
   createdAt: string;
   updatedAt: string;
@@ -31,4 +34,5 @@ export type MenuItem = {
     width: number;
   };
   price: number;
+  gender: Gender;
 };

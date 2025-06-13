@@ -169,38 +169,26 @@
       }
     }
     &-image {
-      width: 70px;
       height: 90px;
       object-fit: contain;
       margin-right: 32px;
     }
     &-info {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
       gap: 32px;
       &_label {
+        width: 70%;
         font-size: 20px;
-        margin-bottom: 4px;
+        text-align: center;
       }
       &_price {
+        width: 30%;
+        text-align: right;
         font-size: 20px;
       }
-    }
-
-    &_info {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    &_label {
-      font-size: 16px;
-      margin-bottom: 4px;
-    }
-
-    &_price {
-      font-weight: bold;
-      font-size: 16px;
     }
     &_p {
       text-align: center;
