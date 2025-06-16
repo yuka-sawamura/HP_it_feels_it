@@ -90,7 +90,7 @@ export default function Removal({
             </div>
           </div>
 
-          <section>
+          <section id="menu">
             <div className="itit_menu2">
               <div className="itit_menu2_group">
                 <h1 className="itit_menu2_title">脱毛メニュー</h1>
