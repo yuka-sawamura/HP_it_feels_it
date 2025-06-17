@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { client } from "@/libs/client";
-import { Staff } from "@/libs/types";
+import { HairMenu, MenuItem, Staff } from "@/libs/types";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -14,7 +14,31 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import Instagram from "@/components/Instagram";
 
-export default function Home({ staff }: { staff: Staff[] }) {
+export default function Home({
+  staff,
+  menu,
+}: {
+  staff: Staff[];
+  menu: HairMenu[];
+}) {
+  console.log(menu);
+  const menuByCategory = menu.reduce((acc, item) => {
+    item.category.forEach((cat) => {
+      if (!acc[cat]) {
+        acc[cat] = [];
+      }
+      acc[cat].push(item);
+    });
+    return acc;
+  }, {} as Record<string, HairMenu[]>);
+
+  // 各カテゴリーのアイテムを逆順にソート
+  Object.keys(menuByCategory).forEach((category) => {
+    menuByCategory[category] = menuByCategory[category].reverse();
+  });
+
+  console.log("menuByCategory:", menuByCategory);
+
   return (
     <>
       <Head>
@@ -69,35 +93,28 @@ export default function Home({ staff }: { staff: Staff[] }) {
               <div className="itit_menu_group">
                 <h1 className="itit_menu_title">メニューと料金</h1>
               </div>
+              {/* ヘアカテゴリーのメニューを動的に表示 */}
               <div className="itit_menu_price-table_group">
-                <div className="itit_menu_price-table">
-                  <p className="itit_menu_price-table_title">ヘア</p>
-                  <ul className="itit_menu_price-table_list">
-                    <li className="itit_menu_price-table_list_item">
-                      <span className="itit_menu_price-table_name">カット</span>
-                      <span className="itit_menu_price-table_number non_tilde">
-                        ¥4,000
-                      </span>
-                    </li>
-                    <li className="itit_menu_price-table_list_item">
-                      <span className="itit_menu_price-table_name">
-                        カット・カラー
-                      </span>
-                      <span className="itit_menu_price-table_number">
-                        ¥8,000〜
-                      </span>
-                    </li>
-                    <li className="itit_menu_price-table_list_item">
-                      <span className="itit_menu_price-table_name">
-                        カット・パーマ
-                      </span>
-                      <span className="itit_menu_price-table_number">
-                        ¥8,000〜
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-
+                {menuByCategory["ヘア"] && (
+                  <div className="itit_menu_price-table">
+                    <p className="itit_menu_price-table_title">ヘア</p>
+                    <ul className="itit_menu_price-table_list">
+                      {menuByCategory["ヘア"].map((item, index) => (
+                        <li
+                          key={index}
+                          className="itit_menu_price-table_list_item"
+                        >
+                          <span className="itit_menu_price-table_name">
+                            {item.label}
+                          </span>
+                          <span className={`itit_menu_price-table_number`}>
+                            {item.pricing}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
                 <div className="itit_menu_price-table">
                   <p className="itit_menu_price-table_title">ストレート</p>
                   <ul className="itit_menu_price-table_list">
@@ -424,11 +441,16 @@ export default function Home({ staff }: { staff: Staff[] }) {
 }
 
 export const getStaticProps = async () => {
-  const data = await client.get({ endpoint: "staff" });
+  const data = await client.get({ endpoint: "staff", queries: { limit: 100 } });
+  const menu = await client.get({
+    endpoint: "hair-menu",
+    queries: { limit: 100 },
+  });
 
   return {
     props: {
       staff: data.contents,
+      menu: menu.contents,
     },
   };
 };

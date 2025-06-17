@@ -36,3 +36,13 @@ export type MenuItem = {
   price: number;
   gender: Gender;
 };
+
+export type HairMenu = {
+  id: string;
+  createdAt: string;
+  updatedAt: string;
+  category: string[];
+  label: string;
+  pricing: string;
+  tilde?: boolean;
+};

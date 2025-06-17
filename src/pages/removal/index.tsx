@@ -334,9 +334,15 @@ export default function Removal({
 }
 
 export const getStaticProps = async () => {
-  const data = await client.get({ endpoint: "staff" });
-  const women = await client.get({ endpoint: "removal-menu-women" });
-  const men = await client.get({ endpoint: "removal-menu-men" });
+  const data = await client.get({ endpoint: "staff", queries: { limit: 100 } });
+  const women = await client.get({
+    endpoint: "removal-menu-women",
+    queries: { limit: 100 },
+  });
+  const men = await client.get({
+    endpoint: "removal-menu-men",
+    queries: { limit: 100 },
+  });
 
   return {
     props: {
