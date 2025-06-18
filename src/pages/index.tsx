@@ -115,123 +115,116 @@ export default function Home({
                     </ul>
                   </div>
                 )}
-                <div className="itit_menu_price-table">
-                  <p className="itit_menu_price-table_title">ストレート</p>
-                  <ul className="itit_menu_price-table_list">
-                    <li className="itit_menu_price-table_list_item">
-                      <span className="itit_menu_price-table_name">
-                        縮毛矯正
-                      </span>
-                      <span className="itit_menu_price-table_number non_tilde">
-                        ¥4,000
-                      </span>
-                    </li>
-                    <li className="itit_menu_price-table_list_item">
-                      <span className="itit_menu_price-table_name">
-                        酸性ストレートパーマ
-                      </span>
-                      <span className="itit_menu_price-table_number">
-                        ¥8,000〜
-                      </span>
-                    </li>
-                  </ul>
-                </div>
+                {menuByCategory["ストレート"] && (
+                  <div className="itit_menu_price-table">
+                    <p className="itit_menu_price-table_title">ストレート</p>
+                    <ul className="itit_menu_price-table_list">
+                      {menuByCategory["ストレート"].map((item, index) => (
+                        <li
+                          key={index}
+                          className="itit_menu_price-table_list_item"
+                        >
+                          <span className="itit_menu_price-table_name">
+                            {item.label}
+                          </span>
+                          <span className={`itit_menu_price-table_number`}>
+                            {item.pricing}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
 
               <div className="itit_menu_price-table_group">
-                <div className="itit_menu_price-table">
-                  <p className="itit_menu_price-table_title">ハイライト</p>
-                  <ul className="itit_menu_price-table_list">
-                    <li className="itit_menu_price-table_list_item">
-                      <span className="itit_menu_price-table_name">
-                        ハイライトS
-                      </span>
-                      <span className="itit_menu_price-table_number non_tilde">
-                        ¥4,000
-                      </span>
-                    </li>
-                    <li className="itit_menu_price-table_list_item">
-                      <span className="itit_menu_price-table_name">
-                        ハイライトM
-                      </span>
-                      <span className="itit_menu_price-table_number">
-                        ¥8,000〜
-                      </span>
-                    </li>
-                    <li className="itit_menu_price-table_list_item">
-                      <span className="itit_menu_price-table_name">
-                        ハイライトL
-                      </span>
-                      <span className="itit_menu_price-table_number">
-                        ¥8,000〜
-                      </span>
-                    </li>
-                  </ul>
-                </div>
+                {menuByCategory["ハイライト"] && (
+                  <div className="itit_menu_price-table">
+                    <p className="itit_menu_price-table_title">ハイライト</p>
+                    <ul className="itit_menu_price-table_list">
+                      {menuByCategory["ハイライト"].map((item, index) => (
+                        <li
+                          key={index}
+                          className="itit_menu_price-table_list_item"
+                        >
+                          <span className="itit_menu_price-table_name">
+                            {item.label}
+                          </span>
+                          <span className={`itit_menu_price-table_number`}>
+                            {item.pricing}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
 
-                <div className="itit_menu_price-table">
-                  <p className="itit_menu_price-table_title">トリートメント</p>
-                  <ul className="itit_menu_price-table_list">
-                    <li className="itit_menu_price-table_list_item">
-                      <span className="itit_menu_price-table_name">
-                        トリートメント
-                      </span>
-                      <span className="itit_menu_price-table_number non_tilde">
-                        ¥4,000
-                      </span>
-                    </li>
-                  </ul>
-                </div>
+                {menuByCategory["トリートメント"] && (
+                  <div className="itit_menu_price-table">
+                    <p className="itit_menu_price-table_title">
+                      トリートメント
+                    </p>
+                    <ul className="itit_menu_price-table_list">
+                      {menuByCategory["トリートメント"].map((item, index) => (
+                        <li
+                          key={index}
+                          className="itit_menu_price-table_list_item"
+                        >
+                          <span className="itit_menu_price-table_name">
+                            {item.label}
+                          </span>
+                          <span className={`itit_menu_price-table_number`}>
+                            {item.pricing}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
 
               <div className="itit_menu_price-table_group">
-                <div className="itit_menu_price-table">
-                  <p className="itit_menu_price-table_title">出張</p>
-                  <ul className="itit_menu_price-table_list">
-                    <li className="itit_menu_price-table_list_item">
-                      <span className="itit_menu_price-table_name">カット</span>
-                      <span className="itit_menu_price-table_number">
-                        ¥2,000
-                      </span>
-                    </li>
-                    <li className="itit_menu_price-table_list_item">
-                      <span className="itit_menu_price-table_name">
-                        カット＋顔剃り
-                      </span>
-                      <span className="itit_menu_price-table_number">
-                        ¥2,500
-                      </span>
-                    </li>
-                    <li className="itit_menu_price-table_list_item">
-                      <span className="itit_menu_price-table_name">顔剃り</span>
-                      <span className="itit_menu_price-table_number">
-                        ¥1,000
-                      </span>
-                    </li>
-                    <li className="itit_menu_price-table_list_item">
-                      <span className="itit_menu_price-table_name">
-                        カット＋顔剃り＋カラー
-                      </span>
-                      <span className="itit_menu_price-table_number">
-                        ¥5,000
-                      </span>
-                    </li>
-                  </ul>
-                </div>
+                {menuByCategory["出張"] && (
+                  <div className="itit_menu_price-table">
+                    <p className="itit_menu_price-table_title">出張</p>
+                    <ul className="itit_menu_price-table_list">
+                      {menuByCategory["出張"].map((item, index) => (
+                        <li
+                          key={index}
+                          className="itit_menu_price-table_list_item"
+                        >
+                          <span className="itit_menu_price-table_name">
+                            {item.label}
+                          </span>
+                          <span className={`itit_menu_price-table_number`}>
+                            {item.pricing}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
 
-                <div className="itit_menu_price-table">
-                  <p className="itit_menu_price-table_title">自宅出張</p>
-                  <ul className="itit_menu_price-table_list">
-                    <li className="itit_menu_price-table_list_item">
-                      <span className="itit_menu_price-table_name">
-                        自宅出張
-                      </span>
-                      <span className="itit_menu_price-table_number">
-                        ¥5,000
-                      </span>
-                    </li>
-                  </ul>
-                </div>
+                {menuByCategory["自宅出張"] && (
+                  <div className="itit_menu_price-table">
+                    <p className="itit_menu_price-table_title">自宅出張</p>
+                    <ul className="itit_menu_price-table_list">
+                      {menuByCategory["自宅出張"].map((item, index) => (
+                        <li
+                          key={index}
+                          className="itit_menu_price-table_list_item"
+                        >
+                          <span className="itit_menu_price-table_name">
+                            {item.label}
+                          </span>
+                          <span className={`itit_menu_price-table_number`}>
+                            {item.pricing}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
             </div>
           </section>
