@@ -37,10 +37,6 @@ export default function Removal({
 }) {
   const [selectedMenu, setSelectedMenu] = useState("woman");
 
-  console.log(selectedMenu);
-  console.log(women);
-  console.log(men);
-
   return (
     <>
       <Head>

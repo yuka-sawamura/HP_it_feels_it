@@ -3,6 +3,8 @@ import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Refa from "@/components/Refa";
+import VisitBeauty from "@/components/VisitBeauty";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { client } from "@/libs/client";
 import { HairMenu, MenuItem, Staff } from "@/libs/types";
@@ -21,7 +23,6 @@ export default function Home({
   staff: Staff[];
   menu: HairMenu[];
 }) {
-  console.log(menu);
   const menuByCategory = menu.reduce((acc, item) => {
     item.category.forEach((cat) => {
       if (!acc[cat]) {
@@ -36,8 +37,6 @@ export default function Home({
   Object.keys(menuByCategory).forEach((category) => {
     menuByCategory[category] = menuByCategory[category].reverse();
   });
-
-  console.log("menuByCategory:", menuByCategory);
 
   return (
     <>
@@ -356,76 +355,9 @@ export default function Home({
             </div>
           </section>
 
-          <section>
-            <div className="itit_ReFa">
-              <div className="itit_ReFa_group">
-                <div className="itit_ReFa_image-group">
-                  <img
-                    className="itit_ReFa_image"
-                    src="/ReFa.png"
-                    alt="ReFaの画像"
-                  />
-                </div>
-                <div className="itit_ReFa_text-group">
-                  <h2 className="itit_ReFa_title">ReFa 商品をご購入できます</h2>
-                  <ul className="itit_ReFa_text-list">
-                    <li className="itit_ReFa_text">
-                      <img
-                        src="/check.svg"
-                        alt="チェックマーク"
-                        className="itit_ReFa_text_list_check"
-                      />
-                      メーカー直営オンラインショップ(B happy)での買い物が可能！
-                    </li>
-                    <li className="itit_ReFa_text">
-                      <img
-                        src="/check.svg"
-                        alt="チェックマーク"
-                        className="itit_ReFa_text_list_check"
-                      />
-                      B happy会員限定クーポンプレゼント
-                    </li>
-                    <li className="itit_ReFa_text">
-                      <img
-                        src="/check.svg"
-                        alt="チェックマーク"
-                        className="itit_ReFa_text_list_check"
-                      />
-                      お買い物ポイント付与
-                    </li>
-                  </ul>
-                  <p className="itit_ReFa_text_sp">
-                    当店では、ReFaなどMTG製品をご購入できます。
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
+          <Refa />
 
-          <section id="visit-beauty">
-            <div className="itit_visit-beauty">
-              <div className="itit_visit-beauty_group">
-                <div className="itit_visit-beauty_image-group">
-                  <img
-                    className="itit_visit-beauty_image"
-                    src="/visit-beauty.png"
-                    alt="訪問理美容の画像"
-                  />
-                </div>
-                <div className="itit_visit-beauty_text-group">
-                  <h2 className="itit_visit-beauty_title">訪問理美容</h2>
-                  <div className="itit_visit-beauty_text-list">
-                    <p className="itit_visit-beauty_text">
-                      介護・医療施設への訪問美容も実施しています。
-                    </p>
-                    <p className="itit_visit-beauty_text">
-                      お気軽にお問い合わせください。
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+          <VisitBeauty />
         </main>
         <Footer />
       </div>
