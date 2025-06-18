@@ -4,15 +4,41 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import { client } from "@/libs/client";
+import { HairMenu, MenuItem, Staff } from "@/libs/types";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 
 // import required modules
 import { Navigation } from "swiper/modules";
+import Instagram from "@/components/Instagram";
 
-export default function Home() {
+export default function Home({
+  staff,
+  menu,
+}: {
+  staff: Staff[];
+  menu: HairMenu[];
+}) {
+  console.log(menu);
+  const menuByCategory = menu.reduce((acc, item) => {
+    item.category.forEach((cat) => {
+      if (!acc[cat]) {
+        acc[cat] = [];
+      }
+      acc[cat].push(item);
+    });
+    return acc;
+  }, {} as Record<string, HairMenu[]>);
+
+  // 各カテゴリーのアイテムを逆順にソート
+  Object.keys(menuByCategory).forEach((category) => {
+    menuByCategory[category] = menuByCategory[category].reverse();
+  });
+
+  console.log("menuByCategory:", menuByCategory);
+
   return (
     <>
       <Head>
@@ -67,152 +93,138 @@ export default function Home() {
               <div className="itit_menu_group">
                 <h1 className="itit_menu_title">メニューと料金</h1>
               </div>
+              {/* ヘアカテゴリーのメニューを動的に表示 */}
               <div className="itit_menu_price-table_group">
-                <div className="itit_menu_price-table">
-                  <p className="itit_menu_price-table_title">ヘア</p>
-                  <ul className="itit_menu_price-table_list">
-                    <li className="itit_menu_price-table_list_item">
-                      <span className="itit_menu_price-table_name">カット</span>
-                      <span className="itit_menu_price-table_number non_tilde">
-                        ¥4,000
-                      </span>
-                    </li>
-                    <li className="itit_menu_price-table_list_item">
-                      <span className="itit_menu_price-table_name">
-                        カット・カラー
-                      </span>
-                      <span className="itit_menu_price-table_number">
-                        ¥8,000〜
-                      </span>
-                    </li>
-                    <li className="itit_menu_price-table_list_item">
-                      <span className="itit_menu_price-table_name">
-                        カット・パーマ
-                      </span>
-                      <span className="itit_menu_price-table_number">
-                        ¥8,000〜
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="itit_menu_price-table">
-                  <p className="itit_menu_price-table_title">ストレート</p>
-                  <ul className="itit_menu_price-table_list">
-                    <li className="itit_menu_price-table_list_item">
-                      <span className="itit_menu_price-table_name">
-                        縮毛矯正
-                      </span>
-                      <span className="itit_menu_price-table_number non_tilde">
-                        ¥4,000
-                      </span>
-                    </li>
-                    <li className="itit_menu_price-table_list_item">
-                      <span className="itit_menu_price-table_name">
-                        酸性ストレートパーマ
-                      </span>
-                      <span className="itit_menu_price-table_number">
-                        ¥8,000〜
-                      </span>
-                    </li>
-                  </ul>
-                </div>
+                {menuByCategory["ヘア"] && (
+                  <div className="itit_menu_price-table">
+                    <p className="itit_menu_price-table_title">ヘア</p>
+                    <ul className="itit_menu_price-table_list">
+                      {menuByCategory["ヘア"].map((item, index) => (
+                        <li
+                          key={index}
+                          className="itit_menu_price-table_list_item"
+                        >
+                          <span className="itit_menu_price-table_name">
+                            {item.label}
+                          </span>
+                          <span className={`itit_menu_price-table_number`}>
+                            {item.pricing}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {menuByCategory["ストレート"] && (
+                  <div className="itit_menu_price-table">
+                    <p className="itit_menu_price-table_title">ストレート</p>
+                    <ul className="itit_menu_price-table_list">
+                      {menuByCategory["ストレート"].map((item, index) => (
+                        <li
+                          key={index}
+                          className="itit_menu_price-table_list_item"
+                        >
+                          <span className="itit_menu_price-table_name">
+                            {item.label}
+                          </span>
+                          <span className={`itit_menu_price-table_number`}>
+                            {item.pricing}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
 
               <div className="itit_menu_price-table_group">
-                <div className="itit_menu_price-table">
-                  <p className="itit_menu_price-table_title">ハイライト</p>
-                  <ul className="itit_menu_price-table_list">
-                    <li className="itit_menu_price-table_list_item">
-                      <span className="itit_menu_price-table_name">
-                        ハイライトS
-                      </span>
-                      <span className="itit_menu_price-table_number non_tilde">
-                        ¥4,000
-                      </span>
-                    </li>
-                    <li className="itit_menu_price-table_list_item">
-                      <span className="itit_menu_price-table_name">
-                        ハイライトM
-                      </span>
-                      <span className="itit_menu_price-table_number">
-                        ¥8,000〜
-                      </span>
-                    </li>
-                    <li className="itit_menu_price-table_list_item">
-                      <span className="itit_menu_price-table_name">
-                        ハイライトL
-                      </span>
-                      <span className="itit_menu_price-table_number">
-                        ¥8,000〜
-                      </span>
-                    </li>
-                  </ul>
-                </div>
+                {menuByCategory["ハイライト"] && (
+                  <div className="itit_menu_price-table">
+                    <p className="itit_menu_price-table_title">ハイライト</p>
+                    <ul className="itit_menu_price-table_list">
+                      {menuByCategory["ハイライト"].map((item, index) => (
+                        <li
+                          key={index}
+                          className="itit_menu_price-table_list_item"
+                        >
+                          <span className="itit_menu_price-table_name">
+                            {item.label}
+                          </span>
+                          <span className={`itit_menu_price-table_number`}>
+                            {item.pricing}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
 
-                <div className="itit_menu_price-table">
-                  <p className="itit_menu_price-table_title">トリートメント</p>
-                  <ul className="itit_menu_price-table_list">
-                    <li className="itit_menu_price-table_list_item">
-                      <span className="itit_menu_price-table_name">
-                        トリートメント
-                      </span>
-                      <span className="itit_menu_price-table_number non_tilde">
-                        ¥4,000
-                      </span>
-                    </li>
-                  </ul>
-                </div>
+                {menuByCategory["トリートメント"] && (
+                  <div className="itit_menu_price-table">
+                    <p className="itit_menu_price-table_title">
+                      トリートメント
+                    </p>
+                    <ul className="itit_menu_price-table_list">
+                      {menuByCategory["トリートメント"].map((item, index) => (
+                        <li
+                          key={index}
+                          className="itit_menu_price-table_list_item"
+                        >
+                          <span className="itit_menu_price-table_name">
+                            {item.label}
+                          </span>
+                          <span className={`itit_menu_price-table_number`}>
+                            {item.pricing}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
 
               <div className="itit_menu_price-table_group">
-                <div className="itit_menu_price-table">
-                  <p className="itit_menu_price-table_title">出張</p>
-                  <ul className="itit_menu_price-table_list">
-                    <li className="itit_menu_price-table_list_item">
-                      <span className="itit_menu_price-table_name">カット</span>
-                      <span className="itit_menu_price-table_number">
-                        ¥2,000
-                      </span>
-                    </li>
-                    <li className="itit_menu_price-table_list_item">
-                      <span className="itit_menu_price-table_name">
-                        カット＋顔剃り
-                      </span>
-                      <span className="itit_menu_price-table_number">
-                        ¥2,500
-                      </span>
-                    </li>
-                    <li className="itit_menu_price-table_list_item">
-                      <span className="itit_menu_price-table_name">顔剃り</span>
-                      <span className="itit_menu_price-table_number">
-                        ¥1,000
-                      </span>
-                    </li>
-                    <li className="itit_menu_price-table_list_item">
-                      <span className="itit_menu_price-table_name">
-                        カット＋顔剃り＋カラー
-                      </span>
-                      <span className="itit_menu_price-table_number">
-                        ¥5,000
-                      </span>
-                    </li>
-                  </ul>
-                </div>
+                {menuByCategory["出張"] && (
+                  <div className="itit_menu_price-table">
+                    <p className="itit_menu_price-table_title">出張</p>
+                    <ul className="itit_menu_price-table_list">
+                      {menuByCategory["出張"].map((item, index) => (
+                        <li
+                          key={index}
+                          className="itit_menu_price-table_list_item"
+                        >
+                          <span className="itit_menu_price-table_name">
+                            {item.label}
+                          </span>
+                          <span className={`itit_menu_price-table_number`}>
+                            {item.pricing}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
 
-                <div className="itit_menu_price-table">
-                  <p className="itit_menu_price-table_title">自宅出張</p>
-                  <ul className="itit_menu_price-table_list">
-                    <li className="itit_menu_price-table_list_item">
-                      <span className="itit_menu_price-table_name">
-                        自宅出張
-                      </span>
-                      <span className="itit_menu_price-table_number">
-                        ¥5,000
-                      </span>
-                    </li>
-                  </ul>
-                </div>
+                {menuByCategory["自宅出張"] && (
+                  <div className="itit_menu_price-table">
+                    <p className="itit_menu_price-table_title">自宅出張</p>
+                    <ul className="itit_menu_price-table_list">
+                      {menuByCategory["自宅出張"].map((item, index) => (
+                        <li
+                          key={index}
+                          className="itit_menu_price-table_list_item"
+                        >
+                          <span className="itit_menu_price-table_name">
+                            {item.label}
+                          </span>
+                          <span className={`itit_menu_price-table_number`}>
+                            {item.pricing}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
             </div>
           </section>
@@ -294,41 +306,24 @@ export default function Home() {
                 className="mySwiper"
                 breakpoints={{
                   768: {
-                    slidesPerView: 3,
+                    slidesPerView: staff.length,
+
                     spaceBetween: 10,
                   },
                 }}
               >
-                <SwiperSlide>
-                  <div className="itit_staff_item">
-                    <div className="itit_staff_image"></div>
-                    <p className="itit_staff_role">ヘアスタイリスト</p>
-                    <h3 className="itit_staff_name">ヤマミチ アツシ</h3>
-                    <p className="itit_staff_message">
-                      いつも楽しくをモットーに！
-                    </p>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="itit_staff_item">
-                    <div className="itit_staff_image"></div>
-                    <p className="itit_staff_role">ヘアスタイリスト</p>
-                    <h3 className="itit_staff_name">ヤマミチ アツシ</h3>
-                    <p className="itit_staff_message">
-                      いつも楽しくをモットーに！
-                    </p>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="itit_staff_item">
-                    <div className="itit_staff_image"></div>
-                    <p className="itit_staff_role">ヘアスタイリスト</p>
-                    <h3 className="itit_staff_name">ヤマミチ アツシ</h3>
-                    <p className="itit_staff_message">
-                      いつも楽しくをモットーに！
-                    </p>
-                  </div>
-                </SwiperSlide>
+                {staff.map((item, index) => (
+                  <SwiperSlide key={index}>
+                    <div className="itit_staff_item">
+                      <div className="itit_staff_image">
+                        <img src={item.image.url} alt={item.name} />
+                      </div>
+                      <p className="itit_staff_role">{item.position}</p>
+                      <h3 className="itit_staff_name">{item.name}</h3>
+                      <p className="itit_staff_message">{item.intro}</p>
+                    </div>
+                  </SwiperSlide>
+                ))}
               </Swiper>
             </div>
             <div className="itit_staff_arrow-group">
@@ -351,148 +346,7 @@ export default function Home() {
             </div>
           </section>
 
-          <section id="information">
-            <div className="itit_information">
-              <div className="itit_information_group">
-                <h2 className="itit_information_title">新着情報</h2>
-                <p className="itit_information_subtitle">(Instagram)</p>
-                <div className="itit_information_instagram_group">
-                  <Swiper
-                    navigation={{
-                      nextEl: "#information-button-next",
-                      prevEl: "#information-button-prev",
-                    }}
-                    modules={[Navigation]}
-                    className="mySwiper"
-                    breakpoints={{
-                      768: {
-                        slidesPerView: 3,
-                        spaceBetween: 10,
-                      },
-                    }}
-                  >
-                    <SwiperSlide>
-                      <div className="itit_information_instagram">
-                        <div className="itit_information_instagram_item">
-                          <img
-                            className="itit_information_instagram_logo"
-                            src="/Instagram_logo.svg"
-                            alt="Instagram画像"
-                          />
-                          <p className="itit_information_instagram_name">
-                            itfeelsit
-                          </p>
-                          <p className="itit_information_instagram_date">
-                            2024/01/01
-                          </p>
-                        </div>
-                        <img
-                          className="itit_information_instagram_image"
-                          src="/staff.png"
-                          alt="スタッフ画像"
-                        />
-                        <p className="itit_information_instagram_text">
-                          今年も皆様のおかげで無事に1年終えることができました🥲
-                          ....
-                        </p>
-                        <a
-                          className="itit_information_instagram_more"
-                          href="https://www.instagram.com/itfeelsit/"
-                          target="_blank"
-                        >
-                          もっと読む→
-                        </a>
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <div className="itit_information_instagram">
-                        <div className="itit_information_instagram_item">
-                          <img
-                            className="itit_information_instagram_logo"
-                            src="/Instagram_logo.svg"
-                            alt="Instagram画像"
-                          />
-                          <p className="itit_information_instagram_name">
-                            itfeelsit
-                          </p>
-                          <p className="itit_information_instagram_date">
-                            2024/01/01
-                          </p>
-                        </div>
-                        <img
-                          className="itit_information_instagram_image"
-                          src="/staff.png"
-                          alt="スタッフ画像"
-                        />
-                        <p className="itit_information_instagram_text">
-                          今年も皆様のおかげで無事に1年終えることができました🥲
-                          ....
-                        </p>
-                        <a
-                          className="itit_information_instagram_more"
-                          href="https://www.instagram.com/itfeelsit/"
-                          target="_blank"
-                        >
-                          もっと読む→
-                        </a>
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <div className="itit_information_instagram">
-                        <div className="itit_information_instagram_item">
-                          <img
-                            className="itit_information_instagram_logo"
-                            src="/Instagram_logo.svg"
-                            alt="Instagram画像"
-                          />
-                          <p className="itit_information_instagram_name">
-                            itfeelsit
-                          </p>
-                          <p className="itit_information_instagram_date">
-                            2024/01/01
-                          </p>
-                        </div>
-                        <img
-                          className="itit_information_instagram_image"
-                          src="/staff.png"
-                          alt="スタッフ画像"
-                        />
-                        <p className="itit_information_instagram_text">
-                          今年も皆様のおかげで無事に1年終えることができました🥲
-                          ....
-                        </p>
-                        <a
-                          className="itit_information_instagram_more"
-                          href="https://www.instagram.com/itfeelsit/"
-                          target="_blank"
-                        >
-                          もっと読む→
-                        </a>
-                      </div>
-                    </SwiperSlide>
-                  </Swiper>
-                </div>
-              </div>
-            </div>
-            <div className="itit_information_arrow-group">
-              <button
-                id="information-button-prev"
-                className=" itit_information_arrow-group_button"
-                tabIndex={0}
-                role="button"
-              >
-                <img src="/chevron_left.svg" alt="左矢印" />
-              </button>
-              <button
-                id="information-button-next"
-                className="itit_information_arrow-group_button"
-                tabIndex={0}
-                role="button"
-              >
-                <img src="/chevron_right.svg" alt="右矢印" />
-              </button>
-            </div>
-          </section>
+          <Instagram />
 
           <section id="access">
             <div className="itit_access">
@@ -578,3 +432,18 @@ export default function Home() {
     </>
   );
 }
+
+export const getStaticProps = async () => {
+  const data = await client.get({ endpoint: "staff", queries: { limit: 100 } });
+  const menu = await client.get({
+    endpoint: "hair-menu",
+    queries: { limit: 100 },
+  });
+
+  return {
+    props: {
+      staff: data.contents,
+      menu: menu.contents,
+    },
+  };
+};

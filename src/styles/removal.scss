@@ -169,38 +169,26 @@
       }
     }
     &-image {
-      width: 70px;
       height: 90px;
       object-fit: contain;
       margin-right: 32px;
     }
     &-info {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
       gap: 32px;
       &_label {
+        width: 70%;
         font-size: 20px;
-        margin-bottom: 4px;
+        text-align: center;
       }
       &_price {
+        width: 30%;
+        text-align: right;
         font-size: 20px;
       }
-    }
-
-    &_info {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    &_label {
-      font-size: 16px;
-      margin-bottom: 4px;
-    }
-
-    &_price {
-      font-weight: bold;
-      font-size: 16px;
     }
     &_p {
       text-align: center;
@@ -285,8 +273,9 @@
 }
 
 .itit_staff {
-  margin-bottom: 80px;
   text-align: center;
+  margin: 0 auto;
+  max-width: 1200px;
   &_title {
     font-size: 40px;
     font-weight: bold;
@@ -295,18 +284,25 @@
       font-size: 28px;
       margin-bottom: 40px;
     }
-  }
-
-  &_list {
     @include pc {
       max-width: 1100px;
       margin: auto;
     }
   }
 
+  &_list {
+    @include pc {
+      margin: 80px;
+      width: 100%;
+      display: block;
+    }
+    @include sp {
+      margin: 28px;
+    }
+  }
+
   &_item {
     display: flex;
-    flex-direction: column;
     align-items: center;
   }
 
@@ -326,6 +322,7 @@
       margin-bottom: 8px;
     }
   }
+
   &_message {
     @include sp {
       display: none;
@@ -338,6 +335,9 @@
     justify-content: center;
     @include pc {
       display: none;
+    }
+    @include sp {
+      margin-bottom: 28px;
     }
   }
 }
@@ -365,7 +365,6 @@
   &_instagram {
     border: 1px solid #d4d4d4;
     width: 300px;
-    height: 450px;
     margin: auto;
     &_group {
       display: flex;
@@ -387,10 +386,6 @@
     &_date {
       padding: 8px 20px;
       margin-left: auto;
-    }
-    &_image {
-      width: 298px;
-      height: 280px;
     }
     &_text {
       padding: 10px;

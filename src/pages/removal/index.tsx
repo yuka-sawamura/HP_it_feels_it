@@ -12,6 +12,9 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Navigation } from "swiper/modules";
+import { client } from "@/libs/client";
+import { MenuItem, Staff } from "@/libs/types";
+import Instagram from "@/components/Instagram";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,8 +26,20 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export default function Home() {
+export default function Removal({
+  staff,
+  women,
+  men,
+}: {
+  staff: Staff[];
+  women: MenuItem[];
+  men: MenuItem[];
+}) {
   const [selectedMenu, setSelectedMenu] = useState("woman");
+
+  console.log(selectedMenu);
+  console.log(women);
+  console.log(men);
 
   return (
     <>
@@ -75,7 +90,7 @@ export default function Home() {
             </div>
           </div>
 
-          <section>
+          <section id="menu">
             <div className="itit_menu2">
               <div className="itit_menu2_group">
                 <h1 className="itit_menu2_title">脱毛メニュー</h1>
@@ -109,114 +124,43 @@ export default function Home() {
               <div className="itit_menu2_card">
                 {selectedMenu === "woman" ? (
                   <div className="itit_menu2_card-group">
-                    <div className="itit_menu2_card-grid">
-                      <img
-                        src="/datumou-bui.svg"
-                        alt="おでこ"
-                        className="itit_menu2_card-image"
-                      />
-                      <div className="itit_menu2_card-info">
-                        <span className="itit_menu2_card-info_label">
-                          おでこ
-                        </span>
-                        <span className="itit_menu2_card-info_price">
-                          ¥2,500
-                        </span>
+                    {women.map((item, index) => (
+                      <div key={index} className="itit_menu2_card-grid">
+                        <img
+                          src={item.thumbnail.url}
+                          alt={item.menu}
+                          className="itit_menu2_card-image"
+                        />
+                        <div className="itit_menu2_card-info">
+                          <span className="itit_menu2_card-info_label">
+                            {item.menu}
+                          </span>
+                          <span className="itit_menu2_card-info_price">
+                            ¥{item.price}
+                          </span>
+                        </div>
                       </div>
-                    </div>
-                    <div className="itit_menu2_card-grid">
-                      <img
-                        src="/datumou-bui.svg"
-                        alt="おでこ"
-                        className="itit_menu2_card-image"
-                      />
-                      <div className="itit_menu2_card-info">
-                        <span className="itit_menu2_card-info_label">
-                          おでこ
-                        </span>
-                        <span className="itit_menu2_card-info_price">
-                          ¥2,500
-                        </span>
-                      </div>
-                    </div>
-                    <div className="itit_menu2_card-grid">
-                      <img
-                        src="/datumou-bui.svg"
-                        alt="おでこ"
-                        className="itit_menu2_card-image"
-                      />
-                      <div className="itit_menu2_card-info">
-                        <span className="itit_menu2_card-info_label">
-                          おでこ
-                        </span>
-                        <span className="itit_menu2_card-info_price">
-                          ¥2,500
-                        </span>
-                      </div>
-                    </div>
-                    <div className="itit_menu2_card-grid">
-                      <img
-                        src="/datumou-bui.svg"
-                        alt="おでこ"
-                        className="itit_menu2_card-image"
-                      />
-                      <div className="itit_menu2_card-info">
-                        <span className="itit_menu2_card-info_label">
-                          おでこ
-                        </span>
-                        <span className="itit_menu2_card-info_price">
-                          ¥2,500
-                        </span>
-                      </div>
-                    </div>
-                    <div className="itit_menu2_card-grid">
-                      <img
-                        src="/datumou-bui.svg"
-                        alt="おでこ"
-                        className="itit_menu2_card-image"
-                      />
-                      <div className="itit_menu2_card-info">
-                        <span className="itit_menu2_card-info_label">
-                          おでこ
-                        </span>
-                        <span className="itit_menu2_card-info_price">
-                          ¥2,500
-                        </span>
-                      </div>
-                    </div>
-                    <div className="itit_menu2_card-grid">
-                      <img
-                        src="/datumou-bui.svg"
-                        alt="おでこ"
-                        className="itit_menu2_card-image"
-                      />
-                      <div className="itit_menu2_card-info">
-                        <span className="itit_menu2_card-info_label">
-                          おでこ
-                        </span>
-                        <span className="itit_menu2_card-info_price">
-                          ¥2,500
-                        </span>
-                      </div>
-                    </div>
+                    ))}
                   </div>
                 ) : (
                   <div className="itit_menu2_card-group">
-                    <div className="itit_menu2_card-grid">
-                      <img
-                        src="/datumou-bui.svg"
-                        alt="おでこ"
-                        className="itit_menu2_card-image"
-                      />
-                      <div className="itit_menu2_card-info">
-                        <span className="itit_menu2_card-info_label">
-                          おでこ
-                        </span>
-                        <span className="itit_menu2_card-info_price">
-                          ¥3,000
-                        </span>
+                    {men.map((item, index) => (
+                      <div key={index} className="itit_menu2_card-grid">
+                        <img
+                          src={item.thumbnail.url}
+                          alt={item.menu}
+                          className="itit_menu2_card-image"
+                        />
+                        <div className="itit_menu2_card-info">
+                          <span className="itit_menu2_card-info_label">
+                            {item.menu}
+                          </span>
+                          <span className="itit_menu2_card-info_price">
+                            ¥{item.price}
+                          </span>
+                        </div>
                       </div>
-                    </div>
+                    ))}
                   </div>
                 )}
                 <p className="itit_menu2_card_p">※ 学生は10％割引</p>
@@ -276,149 +220,49 @@ export default function Home() {
           <section id="staff" className="itit_staff">
             <h2 className="itit_staff_title">スタッフ</h2>
             <div className="itit_staff_list">
-              <div className="itit_staff_item">
-                <div className="itit_staff_image"></div>
-                <p className="itit_staff_role">エステティシャン</p>
-                <h3 className="itit_staff_name">タカハシ イク</h3>
-              </div>
-            </div>
-          </section>
+              <Swiper
+                navigation={{
+                  nextEl: "#staff-button-next",
+                  prevEl: "#staff-button-prev",
+                }}
+                modules={[Navigation]}
+                className="mySwiper"
+                breakpoints={{
+                  768: {
+                    slidesPerView: staff.length,
 
-          <section id="information">
-            <div className="itit_information">
-              <div className="itit_information_group">
-                <h2 className="itit_information_title">新着情報</h2>
-                <p className="itit_information_subtitle">(Instagram)</p>
-                <div className="itit_information_instagram_group">
-                  <Swiper
-                    navigation={{
-                      nextEl: "#information-button-next",
-                      prevEl: "#information-button-prev",
-                    }}
-                    modules={[Navigation]}
-                    className="mySwiper"
-                    breakpoints={{
-                      768: {
-                        slidesPerView: 3,
-                        spaceBetween: 10,
-                      },
-                    }}
-                  >
-                    <SwiperSlide>
-                      <div className="itit_information_instagram">
-                        <div className="itit_information_instagram_item">
-                          <img
-                            className="itit_information_instagram_logo"
-                            src="/Instagram_logo.svg"
-                            alt="Instagram画像"
-                          />
-                          <p className="itit_information_instagram_name">
-                            itfeelsit
-                          </p>
-                          <p className="itit_information_instagram_date">
-                            2024/01/01
-                          </p>
+                    spaceBetween: 10,
+                  },
+                }}
+              >
+                {staff
+                  .filter((staff) => staff.removal)
+                  .map((item, index) => (
+                    <SwiperSlide key={index}>
+                      <div className="itit_staff_item">
+                        <div className="itit_staff_image">
+                          <img src={item.image.url} alt={item.name} />
                         </div>
-                        <img
-                          className="itit_information_instagram_image"
-                          src="/staff.png"
-                          alt="スタッフ画像"
-                        />
-                        <p className="itit_information_instagram_text">
-                          今年も皆様のおかげで無事に1年終えることができました🥲
-                          ....
-                        </p>
-                        <a
-                          className="itit_information_instagram_more"
-                          href="https://www.instagram.com/itfeelsit/"
-                          target="_blank"
-                        >
-                          もっと読む→
-                        </a>
+                        <p className="itit_staff_role">{item.position}</p>
+                        <h3 className="itit_staff_name">{item.name}</h3>
+                        <p className="itit_staff_message">{item.intro}</p>
                       </div>
                     </SwiperSlide>
-                    <SwiperSlide>
-                      <div className="itit_information_instagram">
-                        <div className="itit_information_instagram_item">
-                          <img
-                            className="itit_information_instagram_logo"
-                            src="/Instagram_logo.svg"
-                            alt="Instagram画像"
-                          />
-                          <p className="itit_information_instagram_name">
-                            itfeelsit
-                          </p>
-                          <p className="itit_information_instagram_date">
-                            2024/01/01
-                          </p>
-                        </div>
-                        <img
-                          className="itit_information_instagram_image"
-                          src="/staff.png"
-                          alt="スタッフ画像"
-                        />
-                        <p className="itit_information_instagram_text">
-                          今年も皆様のおかげで無事に1年終えることができました🥲
-                          ....
-                        </p>
-                        <a
-                          className="itit_information_instagram_more"
-                          href="https://www.instagram.com/itfeelsit/"
-                          target="_blank"
-                        >
-                          もっと読む→
-                        </a>
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <div className="itit_information_instagram">
-                        <div className="itit_information_instagram_item">
-                          <img
-                            className="itit_information_instagram_logo"
-                            src="/Instagram_logo.svg"
-                            alt="Instagram画像"
-                          />
-                          <p className="itit_information_instagram_name">
-                            itfeelsit
-                          </p>
-                          <p className="itit_information_instagram_date">
-                            2024/01/01
-                          </p>
-                        </div>
-                        <img
-                          className="itit_information_instagram_image"
-                          src="/staff.png"
-                          alt="スタッフ画像"
-                        />
-                        <p className="itit_information_instagram_text">
-                          今年も皆様のおかげで無事に1年終えることができました🥲
-                          ....
-                        </p>
-                        <a
-                          className="itit_information_instagram_more"
-                          href="https://www.instagram.com/itfeelsit/"
-                          target="_blank"
-                        >
-                          もっと読む→
-                        </a>
-                      </div>
-                    </SwiperSlide>
-                  </Swiper>
-                </div>
-              </div>
+                  ))}
+              </Swiper>
             </div>
-            <div className="itit_information_arrow-group">
+            <div className="itit_staff_arrow-group">
               <button
-                id="information-button-prev"
-                className=" itit_information_arrow-group_button"
+                id="staff-button-prev"
+                className=" itit_staff_arrow-group_button"
                 tabIndex={0}
                 role="button"
               >
                 <img src="/chevron_left.svg" alt="左矢印" />
               </button>
               <button
-                id="information-button-next"
-                className="itit_information_arrow-group_button"
+                id="staff-button-next"
+                className="itit_staff_arrow-group_button"
                 tabIndex={0}
                 role="button"
               >
@@ -426,6 +270,8 @@ export default function Home() {
               </button>
             </div>
           </section>
+
+          <Instagram />
 
           <section id="access">
             <div className="itit_access">
@@ -486,3 +332,23 @@ export default function Home() {
     </>
   );
 }
+
+export const getStaticProps = async () => {
+  const data = await client.get({ endpoint: "staff", queries: { limit: 100 } });
+  const women = await client.get({
+    endpoint: "removal-menu-women",
+    queries: { limit: 100 },
+  });
+  const men = await client.get({
+    endpoint: "removal-menu-men",
+    queries: { limit: 100 },
+  });
+
+  return {
+    props: {
+      staff: data.contents,
+      women: women.contents,
+      men: men.contents,
+    },
+  };
+};
