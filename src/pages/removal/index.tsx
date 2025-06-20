@@ -132,7 +132,7 @@ export default function Removal({
                             {item.menu}
                           </span>
                           <span className="itit_menu2_card-info_price">
-                            ¥{item.price}
+                            ¥{item.price.toLocaleString()}
                           </span>
                         </div>
                       </div>
@@ -152,7 +152,7 @@ export default function Removal({
                             {item.menu}
                           </span>
                           <span className="itit_menu2_card-info_price">
-                            ¥{item.price}
+                            ¥{item.price.toLocaleString()}
                           </span>
                         </div>
                       </div>
@@ -185,11 +185,23 @@ export default function Removal({
                     <p className="itit_light_menu-price">¥5,500</p>
                     <div className="itit_light_menu-matome">
                       <p className="itit_light_menu-line">クレンジング</p>
-                      <p className="itit_light_menu-line">∨</p>
+                      <img
+                        src="/under_arrow.svg"
+                        alt="下矢印"
+                        className="itit_light_menu-line"
+                      />
                       <p className="itit_light_menu-line">光フェイシャル</p>
-                      <p className="itit_light_menu-line">∨</p>
+                      <img
+                        src="/under_arrow.svg"
+                        alt="下矢印"
+                        className="itit_light_menu-line"
+                      />
                       <p className="itit_light_menu-line">パック</p>
-                      <p className="itit_light_menu-line">∨</p>
+                      <img
+                        src="/under_arrow.svg"
+                        alt="下矢印"
+                        className="itit_light_menu-line"
+                      />
                       <p className="itit_light_menu-line">仕上げ</p>
                     </div>
                   </h3>
@@ -198,13 +210,25 @@ export default function Removal({
                     <p className="itit_light_menu-price">¥7,150</p>
                     <div className="itit_light_menu-matome">
                       <p className="itit_light_menu-line">クレンジング</p>
-                      <p className="itit_light_menu-line">∨</p>
+                      <img
+                        src="/under_arrow.svg"
+                        alt="下矢印"
+                        className="itit_light_menu-line"
+                      />
                       <p className="itit_light_menu-line">光フェイシャル</p>
-                      <p className="itit_light_menu-line">∨</p>
+                      <img
+                        src="/under_arrow.svg"
+                        alt="下矢印"
+                        className="itit_light_menu-line"
+                      />
                       <p className="itit_light_menu-line">
                         トリートメントパック
                       </p>
-                      <p className="itit_light_menu-line">∨</p>
+                      <img
+                        src="/under_arrow.svg"
+                        alt="下矢印"
+                        className="itit_light_menu-line"
+                      />
                       <p className="itit_light_menu-line">仕上げ</p>
                     </div>
                   </h3>

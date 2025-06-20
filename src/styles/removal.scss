@@ -160,7 +160,7 @@
     &-grid {
       display: flex;
       align-items: center;
-      padding: 16px;
+      padding: 4px 16px;
       border: 1px solid #ddd;
       border-radius: 6px;
       background-color: white;
@@ -259,6 +259,8 @@
     }
     &-matome {
       padding: 16px;
+      background-color: #fffade;
+      border-radius: 8px;
     }
     &-price {
       font-size: 20px;
