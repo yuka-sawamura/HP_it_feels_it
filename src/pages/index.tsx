@@ -8,6 +8,7 @@ import VisitBeauty from "@/components/VisitBeauty";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { client } from "@/libs/client";
 import { HairMenu, MenuItem, Staff } from "@/libs/types";
+import GoogleMap from "@/components/GoogleMap";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -352,6 +353,7 @@ export default function Home({
               <div className="itit_access_group">
                 <h2 className="itit_access_title">アクセス</h2>
               </div>
+              <GoogleMap />
             </div>
           </section>
 

@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Swiper, SwiperSlide } from "swiper/react";
 import React, { useState } from "react";
+import GoogleMap from "@/components/GoogleMap";
 
 // Import Swiper styles
 import "swiper/css";
@@ -262,6 +263,7 @@ export default function Removal({
               <div className="itit_access_group">
                 <h2 className="itit_access_title">アクセス</h2>
               </div>
+              <GoogleMap />
             </div>
           </section>
 
