@@ -356,7 +356,9 @@ export default function Home({
               <GoogleMap />
               <div className="itit_access_text">
                 <p className="itit_access_text_p">青森県八戸市妙花生8-161</p>
-                <p className="itit_access_text_p">0178-25-8425</p>
+                <a className="itit_access_text_p_tel" href="tel:0178-25-8425">
+                  0178-25-8425
+                </a>
                 <p className="itit_access_text_p">
                   AM 09:00〜PM 18:00(月曜定休)
                 </p>

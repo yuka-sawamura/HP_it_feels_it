@@ -189,19 +189,19 @@ export default function Removal({
                       <img
                         src="/under_arrow.svg"
                         alt="下矢印"
-                        className="itit_light_menu-line"
+                        className="itit_light_menu-line_arrow"
                       />
                       <p className="itit_light_menu-line">光フェイシャル</p>
                       <img
                         src="/under_arrow.svg"
                         alt="下矢印"
-                        className="itit_light_menu-line"
+                        className="itit_light_menu-line_arrow"
                       />
                       <p className="itit_light_menu-line">パック</p>
                       <img
                         src="/under_arrow.svg"
                         alt="下矢印"
-                        className="itit_light_menu-line"
+                        className="itit_light_menu-line_arrow"
                       />
                       <p className="itit_light_menu-line">仕上げ</p>
                     </div>
@@ -214,21 +214,23 @@ export default function Removal({
                       <img
                         src="/under_arrow.svg"
                         alt="下矢印"
-                        className="itit_light_menu-line"
+                        className="itit_light_menu-line_arrow"
                       />
                       <p className="itit_light_menu-line">光フェイシャル</p>
                       <img
                         src="/under_arrow.svg"
                         alt="下矢印"
-                        className="itit_light_menu-line"
+                        className="itit_light_menu-line_arrow"
                       />
                       <p className="itit_light_menu-line">
-                        トリートメントパック
+                        <span className="itit_light_menu-line-blue">
+                          トリートメントパック
+                        </span>
                       </p>
                       <img
                         src="/under_arrow.svg"
                         alt="下矢印"
-                        className="itit_light_menu-line"
+                        className="itit_light_menu-line_arrow"
                       />
                       <p className="itit_light_menu-line">仕上げ</p>
                     </div>

@@ -430,6 +430,16 @@
     margin: 40px;
     &_p {
       margin: 4px;
+      &_tel {
+        margin: 4px;
+        text-decoration: none;
+        display: block;
+
+        &:hover {
+          text-decoration: underline;
+          text-decoration-thickness: 1px;
+        }
+      }
     }
   }
 }
