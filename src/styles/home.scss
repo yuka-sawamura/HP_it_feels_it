@@ -425,6 +425,23 @@
       font-size: 32px;
     }
   }
+  &_text {
+    text-align: center;
+    margin: 28px;
+    &_p {
+      margin: 4px;
+      &_tel {
+        margin: 4px;
+        text-decoration: none;
+        display: block;
+
+        &:hover {
+          text-decoration: underline;
+          text-decoration-thickness: 1px;
+        }
+      }
+    }
+  }
 }
 
 .itit_ReFa {

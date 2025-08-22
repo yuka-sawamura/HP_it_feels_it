@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Swiper, SwiperSlide } from "swiper/react";
 import React, { useState } from "react";
+import GoogleMap from "@/components/GoogleMap";
 
 // Import Swiper styles
 import "swiper/css";
@@ -36,10 +37,6 @@ export default function Removal({
   men: MenuItem[];
 }) {
   const [selectedMenu, setSelectedMenu] = useState("woman");
-
-  console.log(selectedMenu);
-  console.log(women);
-  console.log(men);
 
   return (
     <>
@@ -136,7 +133,7 @@ export default function Removal({
                             {item.menu}
                           </span>
                           <span className="itit_menu2_card-info_price">
-                            ¥{item.price}
+                            ¥{item.price.toLocaleString()}
                           </span>
                         </div>
                       </div>
@@ -156,7 +153,7 @@ export default function Removal({
                             {item.menu}
                           </span>
                           <span className="itit_menu2_card-info_price">
-                            ¥{item.price}
+                            ¥{item.price.toLocaleString()}
                           </span>
                         </div>
                       </div>
@@ -189,11 +186,23 @@ export default function Removal({
                     <p className="itit_light_menu-price">¥5,500</p>
                     <div className="itit_light_menu-matome">
                       <p className="itit_light_menu-line">クレンジング</p>
-                      <p className="itit_light_menu-line">∨</p>
+                      <img
+                        src="/under_arrow.svg"
+                        alt="下矢印"
+                        className="itit_light_menu-line_arrow"
+                      />
                       <p className="itit_light_menu-line">光フェイシャル</p>
-                      <p className="itit_light_menu-line">∨</p>
+                      <img
+                        src="/under_arrow.svg"
+                        alt="下矢印"
+                        className="itit_light_menu-line_arrow"
+                      />
                       <p className="itit_light_menu-line">パック</p>
-                      <p className="itit_light_menu-line">∨</p>
+                      <img
+                        src="/under_arrow.svg"
+                        alt="下矢印"
+                        className="itit_light_menu-line_arrow"
+                      />
                       <p className="itit_light_menu-line">仕上げ</p>
                     </div>
                   </h3>
@@ -202,13 +211,27 @@ export default function Removal({
                     <p className="itit_light_menu-price">¥7,150</p>
                     <div className="itit_light_menu-matome">
                       <p className="itit_light_menu-line">クレンジング</p>
-                      <p className="itit_light_menu-line">∨</p>
+                      <img
+                        src="/under_arrow.svg"
+                        alt="下矢印"
+                        className="itit_light_menu-line_arrow"
+                      />
                       <p className="itit_light_menu-line">光フェイシャル</p>
-                      <p className="itit_light_menu-line">∨</p>
+                      <img
+                        src="/under_arrow.svg"
+                        alt="下矢印"
+                        className="itit_light_menu-line_arrow"
+                      />
                       <p className="itit_light_menu-line">
-                        トリートメントパック
+                        <span className="itit_light_menu-line-blue">
+                          トリートメントパック
+                        </span>
                       </p>
-                      <p className="itit_light_menu-line">∨</p>
+                      <img
+                        src="/under_arrow.svg"
+                        alt="下矢印"
+                        className="itit_light_menu-line_arrow"
+                      />
                       <p className="itit_light_menu-line">仕上げ</p>
                     </div>
                   </h3>
@@ -220,54 +243,18 @@ export default function Removal({
           <section id="staff" className="itit_staff">
             <h2 className="itit_staff_title">スタッフ</h2>
             <div className="itit_staff_list">
-              <Swiper
-                navigation={{
-                  nextEl: "#staff-button-next",
-                  prevEl: "#staff-button-prev",
-                }}
-                modules={[Navigation]}
-                className="mySwiper"
-                breakpoints={{
-                  768: {
-                    slidesPerView: staff.length,
-
-                    spaceBetween: 10,
-                  },
-                }}
-              >
-                {staff
-                  .filter((staff) => staff.removal)
-                  .map((item, index) => (
-                    <SwiperSlide key={index}>
-                      <div className="itit_staff_item">
-                        <div className="itit_staff_image">
-                          <img src={item.image.url} alt={item.name} />
-                        </div>
-                        <p className="itit_staff_role">{item.position}</p>
-                        <h3 className="itit_staff_name">{item.name}</h3>
-                        <p className="itit_staff_message">{item.intro}</p>
-                      </div>
-                    </SwiperSlide>
-                  ))}
-              </Swiper>
-            </div>
-            <div className="itit_staff_arrow-group">
-              <button
-                id="staff-button-prev"
-                className=" itit_staff_arrow-group_button"
-                tabIndex={0}
-                role="button"
-              >
-                <img src="/chevron_left.svg" alt="左矢印" />
-              </button>
-              <button
-                id="staff-button-next"
-                className="itit_staff_arrow-group_button"
-                tabIndex={0}
-                role="button"
-              >
-                <img src="/chevron_right.svg" alt="右矢印" />
-              </button>
+              {staff
+                .filter((staff) => staff.removal)
+                .map((item, index) => (
+                  <div className="itit_staff_item">
+                    <div className="itit_staff_image">
+                      <img src={item.image.url} alt={item.name} />
+                    </div>
+                    <p className="itit_staff_role">{item.position}</p>
+                    <h3 className="itit_staff_name">{item.name}</h3>
+                    <p className="itit_staff_message">{item.intro}</p>
+                  </div>
+                ))}
             </div>
           </section>
 
@@ -278,6 +265,7 @@ export default function Removal({
               <div className="itit_access_group">
                 <h2 className="itit_access_title">アクセス</h2>
               </div>
+              <GoogleMap />
             </div>
           </section>
 
