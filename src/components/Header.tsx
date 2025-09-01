@@ -34,16 +34,18 @@ const Header: React.FC<HeaderProps> = ({ pageName, pageLink }) => {
               </li>
             </ul>
           </div>
-          <div className="itit_header_pages-group" style={pageLinkStyle}>
-            <a className="itit_header_pages" href={pageLink}>
-              {pageName}
-              <img
-                src="/arrow_right.svg"
-                alt="右矢印"
-                className="itit_header_pages_arrow"
-              />
-            </a>
-          </div>
+          <a
+            className="itit_header_pages-group itit_header_pages"
+            href={pageLink}
+            style={pageLinkStyle}
+          >
+            {pageName}
+            <img
+              src="/arrow_right.svg"
+              alt="右矢印"
+              className="itit_header_pages_arrow"
+            />
+          </a>
         </div>
       </header>
     </section>
