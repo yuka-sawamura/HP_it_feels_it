@@ -6,7 +6,6 @@
     position: fixed;
     width: 100%;
     z-index: 1000;
-    box-sizing: border-box;
     background-color: white;
     opacity: 0.9;
     display: flex;
@@ -72,10 +71,6 @@
     }
     text-decoration: underline;
     text-decoration-thickness: 1px;
-    @include sp {
-      color: #ffffff;
-      border-bottom: 1px solid #ffffff;
-    }
   }
   &_pages_arrow {
     width: 18px;

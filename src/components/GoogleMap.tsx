@@ -6,19 +6,24 @@ const GoogleMap = () => {
   const position = { lat: 40.4854, lng: 141.5455 };
 
   return (
-    <div style={{ display: "flex", justifyContent: "center" }}>
-      <div style={{ height: "500px", width: "100%", maxWidth: "1000px" }}>
-        <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || ""}>
-          <Map
-            center={position}
-            zoom={15}
-            gestureHandling={"greedy"}
-            disableDefaultUI={false}
-          >
-            <Marker position={position} />
-          </Map>
-        </APIProvider>
-      </div>
+    <div
+      style={{
+        width: "90%",
+        maxWidth: "800px",
+        height: "clamp(280px, 55vw, 420px)",
+        margin: "0 auto",
+      }}
+    >
+      <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || ""}>
+        <Map
+          center={position}
+          zoom={15}
+          gestureHandling={"greedy"}
+          disableDefaultUI={false}
+        >
+          <Marker position={position} />
+        </Map>
+      </APIProvider>
     </div>
   );
 };
