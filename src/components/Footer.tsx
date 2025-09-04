@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="itit_footer_group">
         <h3 className="itit_footer_name">美容室 it feels it</h3>
         <p className="itit_footer_text">〒031-0814 青森県八戸市妙花生8-161</p>
-        <a className="itit_footer_text1" href="tel:0178-25-8425">
+        <a className="itit_footer_tel" href="tel:0178-25-8425">
           TEL:0178-25-8425
         </a>
         <p className="itit_footer_text">
